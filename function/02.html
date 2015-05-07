@@ -1,800 +1,1643 @@
 <html>
-<head>
-<title>Untitled Document</title>
-</head>
-<body>
-<table width="100%">
-  <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc14></a></font> </div>
-    </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
-        </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
-      atof（将字符串转换成浮点型数） </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> atoi，atol，strtod，strtol，strtoul<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> #include &lt;stdlib.h&gt;<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> double atof(const char *nptr);<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> atof()会扫描参数nptr字符串，跳过前面的空格字符，直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时('\0')才结束转换，并将结果返回。参数nptr字符串可包含正负号、小数点或E(e)来表示指数部分，如123.456或123e-2。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回转换后的浮点型数。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> atof()与使用strtod(nptr,(char**)NULL)结果相同。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> /* 将字符串a 与字符串b转换成数字后相加*/<br>
-      #include&lt;stdlib.h&gt;<br>
-      main()<br>
-      {<br>
-      char *a=”-100.23”;<br>
-      char *b=”200e-2”;<br>
-      float c;<br>
-      c=atof(a)+atof(b);<br>
-      printf(“c=%.2f\n”,c);<br>
-      }<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> c=-98.23<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc15></a></font> </div>
-    </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
-        </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
-      atoi（将字符串转换成整型数） </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> atof，atol，atrtod，strtol，strtoul<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;stdlib.h&gt;<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> int atoi(const char *nptr);<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> atoi()会扫描参数nptr字符串，跳过前面的空格字符，直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时('\0')才结束转换，并将结果返回。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回转换后的整型数。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> atoi()与使用strtol(nptr，(char**)NULL，10)；结果相同。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> /* 将字符串a 与字符串b转换成数字后相加*/<br>
-      #include&lt;stdlib.h&gt;<br>
-      mian()<br>
-      {<br>
-      char a[]=”-100”;<br>
-      char b[]=”456”;<br>
-      int c;<br>
-      c=atoi(a)+atoi(b);<br>
-      printf(c=%d\n”,c);<br>
-      }<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> c=356<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc16></a></font> </div>
-    </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
-        </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
-      atol（将字符串转换成长整型数） </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> atof，atoi，strtod，strtol，strtoul<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;stdlib.h&gt;<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> long atol(const char *nptr);<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> atol()会扫描参数nptr字符串，跳过前面的空格字符，直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时('\0')才结束转换，并将结果返回。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回转换后的长整型数。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> atol()与使用strtol(nptr,(char**)NULL,10)；结果相同。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> /*将字符串a与字符串b转换成数字后相加*/<br>
-      #include&lt;stdlib.h&gt;<br>
-      main()<br>
-      {<br>
-      char a[]=”1000000000”;<br>
-      char b[]=” 234567890”;<br>
-      long c;<br>
-      c=atol(a)+atol(b);<br>
-      printf(“c=%d\n”,c);<br>
-      }<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> c=1234567890<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc17></a></font> </div>
-    </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
-        </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
-      gcvt（将浮点型数转换为字符串，取四舍五入） </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> ecvt，fcvt，sprintf<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;stdlib.h&gt;<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> char *gcvt(double number，size_t 
-      ndigits，char *buf);<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> gcvt()用来将参数number转换成ASCII码字符串，参数ndigits表示显示的位数。gcvt()与ecvt()和fcvt()不同的地方在于，gcvt()所转换后的字符串包含小数点或正负符号。若转换成功，转换后的字符串会放在参数buf指针所指的空间。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回一字符串指针，此地址即为buf指针。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;stdlib.h&gt;<br>
-      main()<br>
-      {<br>
-      double a=123.45;<br>
-      double b=-1234.56;<br>
-      char *ptr;<br>
-      int decpt,sign;<br>
-      gcvt(a,5,ptr);<br>
-      printf(“a value=%s\n”,ptr);<br>
-      ptr=gcvt(b,6,ptr);<br>
-      printf(“b value=%s\n”,ptr);<br>
-      }<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> a value=123.45<br>
-		b value=-1234.56<br>
-      </font> </td>
-  </tr>
-  
-  <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc18></a></font> </div>
-    </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
-        </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
-      strtod（将字符串转换成浮点数） </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> atoi，atol，strtod，strtol，strtoul<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;stdlib.h&gt;<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> double strtod(const char *nptr,char 
-      **endptr);<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> strtod()会扫描参数nptr字符串，跳过前面的空格字符，直到遇上数字或正负符号才开始做转换，到出现非数字或字符串结束时('\0')才结束转换，并将结果返回。若endptr不为NULL，则会将遇到不合条件而终止的nptr中的字符指针由endptr传回。参数nptr字符串可包含正负号、小数点或E(e)来表示指数部分。如123.456或123e-2。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回转换后的浮点型数。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> 参考atof()。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> /*将字符串a，b，c 分别采用10，2，16 进制转换成数字*/<br>
-      #include&lt;stdlib.h&gt;<br>
-      mian()<br>
-      {<br>
-      char a[]=”1000000000”;<br>
-      char b[]=”1000000000”;<br>
-      char c[]=”ffff”;<br>
-      printf(“a=%d\n”,strtod(a,NULL,10));<br>
-      printf(“b=%d\n”,strtod(b,NULL,2));<br>
-      printf(“c=%d\n”,strtod(c,NULL,16));<br>
-      }<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> a=1000000000<br>
-      b=512<br>
-      c=65535<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc19></a></font> </div>
-    </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
-        </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
-      strtol（将字符串转换成长整型数） </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> atof，atoi，atol，strtod，strtoul<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;stdlib.h&gt;<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> long int strtol(const char *nptr,char 
-      **endptr,int base);<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> strtol()会将参数nptr字符串根据参数base来转换成长整型数。参数base范围从2至36，或0。参数base代表采用的进制方式，如base值为10则采用10进制，若base值为16则采用16进制等。当base值为0时则是采用10进制做转换，但遇到如'0x'前置字符则会使用16进制做转换。一开始strtol()会扫描参数nptr字符串，跳过前面的空格字符，直到遇上数字或正负符号才开始做转换，再遇到非数字或字符串结束时('\0')结束转换，并将结果返回。若参数endptr不为NULL，则会将遇到不合条件而终止的nptr中的字符指针由endptr返回。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回转换后的长整型数，否则返回ERANGE并将错误代码存入errno中。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> ERANGE指定的转换字符串超出合法范围。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> /* 将字符串a，b，c 分别采用10，2，16进制转换成数字*/<br>
-      #include&lt;stdlib.h&gt;<br>
-      main()<br>
-      {<br>
-      char a[]=”1000000000”;<br>
-      char b[]=”1000000000”;<br>
-      char c[]=”ffff”;<br>
-      printf(“a=%d\n”,strtol(a,NULL,10));<br>
-      printf(“b=%d\n”,strtol(b,NULL,2));<br>
-      printf(“c=%d\n”,strtol(c,NULL,16));<br>
-      }<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> a=1000000000<br>
-      b=512<br>
-      c=65535<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc20></a></font> </div>
-    </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
-        </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
-      strtoul（将字符串转换成无符号长整型数） </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> atof，atoi，atol，strtod，strtol<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;stdlib.h&gt;<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> unsigned long int strtoul(const 
-      char *nptr,char **endptr,int base);<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> strtoul()会将参数nptr字符串根据参数base来转换成无符号的长整型数。参数base范围从2至36，或0。参数base代表采用的进制方式，如base值为10则采用10进制，若base值为16则采用16进制数等。当base值为0时则是采用10进制做转换，但遇到如'0x'前置字符则会使用16进制做转换。一开始strtoul()会扫描参数nptr字符串，跳过前面的空格字符串，直到遇上数字或正负符号才开始做转换，再遇到非数字或字符串结束时('\0')结束转换，并将结果返回。若参数endptr不为NULL，则会将遇到不合条件而终止的nptr中的字符指针由endptr返回。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回转换后的长整型数，否则返回ERANGE并将错误代码存入errno中。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> ERANGE指定的转换字符串超出合法范围。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> 参考strtol()<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc21></a></font> </div>
-    </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
-        </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
-      toascii（将整型数转换成合法的ASCII 码字符） </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> isascii，toupper，tolower<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;ctype.h&gt;<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> int toascii(int c)<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> toascii()会将参数c转换成7位的unsigned char值，第八位则会被清除，此字符即会被转成ASCII码字符。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> 将转换成功的ASCII码字符值返回。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;stdlib.h&gt;<br>
-      main()<br>
-      {<br>
-      int a=217;<br>
-      char b;<br>
-      printf(“before toascii () : a value =%d(%c)\n”,a,a);<br>
-      b=toascii(a);<br>
-      printf(“after toascii() : a value =%d(%c)\n”,b,b);<br>
-      }<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> before toascii() : a value =217()<br>
-      after toascii() : a value =89(Y)<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc22></a></font> </div>
-    </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
-        </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
-      tolower（将大写字母转换成小写字母） </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> isalpha，toupper<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;stdlib.h&gt;<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> int tolower(int c);<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> 若参数c为大写字母则将该对应的小写字母返回。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回转换后的小写字母，若不须转换则将参数c值返回。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> /* 将s字符串内的大写字母转换成小写字母*/<br>
-      #include&lt;ctype.h&gt;<br>
-      main()<br>
-      {<br>
-      char s[]=”aBcDeFgH12345;!#$”;<br>
-      int i;<br>
-      printf(“before tolower() : %s\n”,s);<br>
-      for(i=0;I&lt;sizeof(s);i++)<br>
-      s[i]=tolower(s[i]);<br>
-      printf(“after tolower() : %s\n”,s);<br>
-      }<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> before tolower() : aBcDeFgH12345;!#$<br>
-      after tolower() : abcdefgh12345;!#$<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc23></a></font> </div>
-    </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
-        </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
-      toupper（将小写字母转换成大写字母） </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> isalpha，tolower<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;ctype.h&gt;<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> int toupper(int c);<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> 若参数c为小写字母则将该对映的大写字母返回。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回转换后的大写字母，若不须转换则将参数c值返回。<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> /* 将s字符串内的小写字母转换成大写字母*/<br>
-      #include&lt;ctype.h&gt;<br>
-      main()<br>
-      {<br>
-      char s[]=”aBcDeFgH12345;!#$”;<br>
-      int i;<br>
-      printf(“before toupper() : %s\n”,s);<br>
-      for(i=0;I&lt;sizeof(s);i++)<br>
-      s[i]=toupper(s[i]);<br>
-      printf(“after toupper() : %s\n”,s);<br>
-      }<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
-    </td>
-    <td valign="top"> <font face='宋体' size='2'> before toupper() : aBcDeFgH12345;!#$<br>
-      after toupper() : ABCDEFGH12345;!#$<br>
-      </font> </td>
-  </tr>
-  <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-      </div>
-    </td>
-  </tr>
-</table>
-</body>
+
+  <head>
+    <title>Untitled Document</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../scripts/shCore.js"></script>
+    <script type="text/javascript" src="../scripts/shBrushCpp.js"></script>
+    <link type="text/css" rel="stylesheet" href="../styles/shCoreDefault.css" />
+    <link type="text/css" rel="stylesheet" href="../styles/all.css" />
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script>
+  </head>
+
+  <body>
+    <table class="table">
+      <tr>
+        <td class="td">
+          <div class="div">
+            <br>
+            <font class="font">
+              <a name=atof></a>
+            </font>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font">
+              <br>
+            </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <br>
+            atof（将字符串转换成浮点型数） 
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 相关函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <a href="02.html#atoi">atoi</a>，
+
+            <a href="02.html#atol">atol</a>，
+
+            <a href="02.html#strtod">strtod</a>，
+
+            <a href="02.html#strtol">strtol</a>，
+
+            <a href="02.html#strtoul">strtoul</a>
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 表头文件 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> #include "stdlib.h"
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 定义函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> double atof(const char *nptr);
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 函数说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> atof()会扫描参数nptr字符串，跳过前面的空格字符，直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时('\0')才结束转换，并将结果返回。参数nptr字符串可包含正负号、小数点或E(e)来表示指数部分，如123.456或123e-2。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 返回值 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> 返回转换后的浮点型数。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 附加说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> atof()与使用strtod(nptr,(char**)NULL)结果相同。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 范例 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> /* 将字符串a 与字符串b转换成数字后相加*/
+
+            <br>
+            <pre class="brush: cpp;">
+                #include "stdio.h"
+                #include "stdlib.h"
+
+                int main(int argc, char const *argv[])
+                {
+                      char a[] = "-100.23";
+                      char b[] = "200e-2";
+                      float c;
+
+                      c = atof(a)+atof(b);
+                      printf("c=%.2f\n", c);
+
+                      return 0;
+                }
+              </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 执行结果 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <pre class="brush: cpp;">
+              c=-98.23
+            </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <br>
+            <font class="font">
+              <a name=atoi></a>
+            </font>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font">
+              <br>
+            </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <br>
+            atoi（将字符串转换成整型数） 
+
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 相关函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <a href="02.html#atof">atof</a>,
+
+            <a href="02.html#atol">atol</a>,
+
+            <a href="02.html#atrtod">atrtod</a>,
+
+            <a href="02.html#strtol">strtol</a>,
+
+            <a href="02.html#strtoul">strtoul</a>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 表头文件 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> #include "stdlib.h"
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 定义函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> int atoi(const char *nptr);
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 函数说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> atoi()会扫描参数nptr字符串，跳过前面的空格字符，直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时('\0')才结束转换，并将结果返回。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 返回值 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> 返回转换后的整型数。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 附加说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> atoi()与使用strtol(nptr，(char**)NULL，10)；结果相同。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 范例 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> /* 将字符串a 与字符串b转换成数字后相加*/
+
+            <br>
+            <pre class="brush: cpp;">
+                #include "stdio.h"
+                #include "stdlib.h"
+
+                int main(int argc, char const *argv[])
+                {
+                      char a[]="-100";
+                      char b[]="456";
+                      int c;
+
+                      c=atoi(a)+atoi(b);
+
+                      printf("c=%d\n",c);
+
+                      return 0;
+                }
+
+              </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 执行结果 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <pre class="brush: cpp;">
+              c=356
+            </pre>
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <br>
+            <font class="font">
+              <a name=atol></a>
+            </font>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font">
+              <br>
+            </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <br>
+            atol（将字符串转换成长整型数） 
+
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 相关函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <a href="02.html#atof">atof</a>,
+
+            <a href="02.html#atoi">atoi</a>,
+
+            <a href="02.html#strtod">strtod</a>,
+
+            <a href="02.html#strtol">strtol</a>,
+
+            <a href="02.html#strtoul">strtoul</a>
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 表头文件 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> #include "stdlib.h"
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 定义函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> long atol(const char *nptr);
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 函数说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> atol()会扫描参数nptr字符串，跳过前面的空格字符，直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时('\0')才结束转换，并将结果返回。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 返回值 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> 返回转换后的长整型数。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 附加说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> atol()与使用strtol(nptr,(char**)NULL,10)；结果相同。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 范例 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> /*将字符串a与字符串b转换成数字后相加*/
+
+            <br>
+            <pre class="brush: cpp;">
+                #include "stdio.h"
+                #include "stdlib.h"
+
+                int main(int argc, char const *argv[])
+                {
+                      char a[] = "1000000000";
+                      char b[] = " 234567890";
+                      long c;
+
+                      c = atol(a)+atol(b);
+                      printf("c=%ld\n", c);
+
+                      return 0;
+                }
+              </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 执行结果 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <pre class="brush: cpp;">
+              c=1234567890
+            </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <br>
+            <font class="font">
+              <a name=ecvt></a>
+            </font>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font">
+              <br>
+            </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <br>
+            ecvt（将浮点型数转换为字符串，取四舍五入） 
+
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 相关函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <a href="02.html#fcvt">fcvt</a>,
+
+            <a href="02.html#gcvt">gcvt</a>,
+
+            <a href="11.html#sprintf">sprintf</a>
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 表头文件 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> #include "stdlib.h"
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 定义函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> char* ecvt(double value, int ndigit, int *decpt, int *sign);
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 函数说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> ecvt()用来将参数value转换成字符串（若有小数点则不包括小数点位），参数ndigits表示最多储存ndigits位（再加上一个'\0'），如果value的长度大于ngigits则低位舍入，如果value的长度小于ngigits则低位补0；参数decpt指向的空间存放value整数位的位数；参数sign指向的空间存放value的符号位，正为0,负为1。建议尽量使用sprintf()进行转换。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 返回值 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> 返回一字符串指针，此地址即为转换后字符串首地址。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 附加说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 范例 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <pre class="brush: cpp;">
+              #include "stdio.h"
+              #include "stdlib.h"
+
+              int main(int argc, char const *argv[])
+              {
+                  double a = 1234.5678;
+                  double b = -1234.1234;
+                  char *ptr;
+                  int decpt, sign;
+
+                  ptr = ecvt(a, 5, &decpt, &sign);
+                  printf("a's decpt: %d\n", decpt);
+                  printf("a value=%c%s\n", sign==0?' ':'-', ptr);
+                  ptr = ecvt(b, 6, &decpt, &sign);
+                  printf("a's decpt: %d\n", decpt);
+                  printf("b value=%c%s\n", sign==0?' ':'-', ptr);
+                  return 0;
+              }
+            </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 执行结果 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <pre class="brush: cpp;">
+              a's decpt: 4
+              a value= 12346
+              a's decpt: 4
+              b value=-123412
+            </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <br>
+            <font class="font">
+              <a name=gcvt></a>
+            </font>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font">
+              <br>
+            </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <br>
+            gcvt（将浮点型数转换为字符串，取四舍五入） 
+
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 相关函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <a href="02.html#ecvt">ecvt</a>,
+
+            <a href="02.html#fcvt">fcvt</a>,
+
+            <a href="11.html#sprintf">sprintf</a>
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 表头文件 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> #include "stdlib.h"
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 定义函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> char *gcvt(double number，size_t ndigits，char *buf);
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 函数说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> gcvt()用来将参数number转换成字符串，参数ndigits表示最多储存ndigits位（再加上一个'\0'），如果value的长度大于ngigits则低位舍入。gcvt()与ecvt()和fcvt()不同的地方在于，gcvt()所转换后的字符串包含小数点或正负符号。若转换成功，转换后的字符串会放在参数buf所指的空间（似乎不能用指针变量，只能用字符串数组）。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 返回值 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> 返回一字符串指针，此地址即为buf指针。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 附加说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 范例 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <pre class="brush: cpp;">
+              #include "stdio.h"
+              #include "stdlib.h"
+
+              int main(int argc, char const *argv[])
+              {
+                  double a = 123.45;
+                  double b = -1234.56;
+                  char ptr[10];
+                  int decpt, sign;
+
+                  gcvt(a, 5, ptr);
+                  printf("a value=%s\n", ptr);
+                  gcvt(b, 6, ptr);
+                  printf("b value=%s\n", ptr);
+                  return 0;
+              }
+            </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 执行结果 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <pre class="brush: cpp;">
+              a value=123.45
+              b value=-1234.56
+            </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <br>
+            <font class="font">
+              <a name=fcvt></a>
+            </font>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font">
+              <br>
+            </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <br>
+            fcvt（将浮点型数转换为字符串，取四舍五入） 
+
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 相关函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <a href="02.html#ecvt">ecvt</a>,
+
+            <a href="02.html#gcvt">gcvt</a>,
+
+            <a href="11.html#sprintf">sprintf</a>
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 表头文件 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> #include "stdlib.h"
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 定义函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> char *fcvt(double value, int ndigit, int *decpt, int *sign);
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 函数说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> ecvt()用来将输入参数number转换成字符串，输入参数ndigits表示最多储存ndigits位小数位（再加上一个'\0'），如果value的长度大于ngigits则低位舍入，如果value的长度小于于ngigits则低位补0；输出参数decpt指向的空间存放整数位位数，输出参数sign指向的空间存放符号位，正为0,负为1。建议尽量使用sprintf()进行转换。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 返回值 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> 返回一字符串指针，此地址即为转换后字符串首地址。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 附加说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 范例 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <pre class="brush: cpp;">
+              #include "stdio.h"
+              #include "stdlib.h"
+
+              int main(int argc, char const *argv[])
+              {
+                  double a = 1234.567;
+                  double b = -12345.123455;
+                  char *ptr;
+                  int decpt, sign;
+
+                  ptr = fcvt(a, 5, &decpt, &sign);
+                  printf("a's decpt: %d\n", decpt);
+                  printf("a value=%c%s\n", sign==0?' ':'-', ptr);
+                  ptr = fcvt(b, 6, &decpt, &sign);
+                  printf("a's decpt: %d\n", decpt);
+                  printf("b value=%c%s\n", sign==0?' ':'-', ptr);
+                  return 0;
+              }
+            </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 执行结果 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <pre class="brush: cpp;">
+              a's decpt: 4
+              a value= 123456700
+              a's decpt: 5
+              b value=-12345123455
+            </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <br>
+            <font class="font">
+              <a name=strtod></a>
+            </font>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font">
+              <br>
+            </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <br>
+            strtod（将字符串转换成浮点数） 
+
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 相关函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <a href="02.html#atoi">atoi</a>,
+            <a href="02.html#atol">atol</a>,
+            <a href="02.html#strtod">strtod</a>,
+            <a href="02.html#strtol">strtol</a>,
+            <a href="02.html#strtoul">strtoul</a>
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 表头文件 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> #include "stdlib.h"
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 定义函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> double strtod(const char *nptr, char **endptr);
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 函数说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> strtod()会扫描参数nptr字符串，跳过前面的空格字符，直到遇上数字或正负符号才开始做转换，到出现非数字或字符串结束时('\0')才结束转换，并将结果返回。若endptr不为NULL，则会将遇到不合条件而终止的nptr中的字符指针由endptr传回。参数nptr字符串可包含正负号、小数点或E(e)来表示指数部分。如123.456或123e-2。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 返回值 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> 返回转换后的浮点型数。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 附加说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> 参考atof()。
+
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 范例 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> /*将字符串a，b，c 分别采用10，2，16 进制转换成数字*/
+
+            <pre class="brush: cpp">
+              #include "stdio.h"
+              #include "stdlib.h"
+
+              int main(int argc, char const *argv[])
+              {
+                  char a[] = "1000000000";
+                  char b[] = "0010000000";
+                  char c[] = "ffff";
+                  char d[] = "    10000";
+
+                  printf("a=%lf\n", strtod(a, NULL));
+                  printf("b=%lf\n", strtod(b, NULL));
+                  printf("c=%lf\n", strtod(c, NULL));
+                  printf("d=%lf\n", strtod(d, NULL));
+
+                    return 0;
+              }
+            </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 执行结果 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <pre class="brush: cpp;">
+              a=1000000000.000000
+              b=10000000.000000
+              c=0.000000
+              d=10000.000000
+            </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <br>
+            <font class="font">
+              <a name=strtol></a>
+            </font>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font">
+              <br>
+            </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <br>
+            strtol（将字符串转换成长整型数） 
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 相关函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <a href="02.html#atof">atof</a>,
+            <a href="02.html#atoi">atoi</a>,
+            <a href="02.html#atol">atol</a>,
+            <a href="02.html#strtod">strtod</a>,
+            <a href="02.html#strtoul">strtoul</a>
+            </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 表头文件 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> #include "stdlib.h"
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 定义函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> long int strtol(const char *nptr, char **endptr, int base);
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 函数说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> strtol()会将参数nptr字符串根据参数base来转换成长整型数。参数base范围从2至36，或0。参数base代表采用的进制方式，如base值为10则采用10进制，若base值为16则采用16进制等。当base值为0时则是采用10进制做转换，但遇到如'0x'前置字符则会使用16进制做转换。一开始strtol()会扫描参数nptr字符串，跳过前面的空格字符，直到遇上数字或正负符号才开始做转换，再遇到非数字或字符串结束时('\0')结束转换，并将结果返回。若参数endptr不为NULL，则会将遇到不合条件而终止的nptr中的字符指针由endptr返回。
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 返回值 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> 返回转换后的长整型数，否则返回ERANGE并将错误代码存入errno中。
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 附加说明 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> ERANGE指定的转换字符串超出合法范围。
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 范例 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> /* 将字符串a，b，c 分别采用10，2，16进制转换成数字*/
+            <pre class="brush: cpp;">
+              #include "stdio.h"
+              #include "stdlib.h"
+
+              int main(int argc, char const *argv[])
+              {
+                  char a[] = "1000000000";
+                  char b[] = "   1000000";
+                  char c[] = "ffff";
+                  char d[] = "0001000000";
+
+                  printf("a=%ld\n", strtol(a, NULL, 10));
+                  printf("b=%ld\n", strtol(b, NULL, 2));
+                  printf("c=%ld\n", strtol(c, NULL, 16));
+                  printf("d=%ld\n", strtol(d, NULL, 16));
+                  return 0;
+              }
+            </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 执行结果 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> 
+            <pre class="brush: cpp;">
+              a=1000000000
+              b=64
+              c=65535
+              d=16777216
+            </pre>
+          </font>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="td">
+          <div class="div">
+            <br>
+            <font class="font">
+              <a name=strtoul></a>
+            </font>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font">
+              <br>
+            </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <br>
+            strtoul（将字符串转换成无符号长整型数） 
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 相关函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> 
+            <a href="02.html#atof">atof</a>,
+            <a href="02.html#atoi">atoi</a>,
+            <a href="02.html#atol">atol</a>,
+            <a href="02.html#strtod">strtod</a>,
+            <a href="02.html#strtol">strtol</a>
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <font class="font"> 表头文件 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> #include "stdlib.h"
+            <br>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 定义函数 </font>
+          </div>
+        </td>
+        <td class="td">
+          <font class="font"> unsigned long int strtoul(const char *nptr, char **endptr, int base);<br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 函数说明 </font></div>
+        </td>
+        <td class="td"><font class="font"> strtoul()会将参数nptr字符串根据参数base来转换成无符号的长整型数。参数base范围从2至36，或0。参数base代表采用的进制方式，如base值为10则采用10进制，若base值为16则采用16进制数等。当base值为0时则是采用10进制做转换，但遇到如'0x'前置字符则会使用16进制做转换。一开始strtoul()会扫描参数nptr字符串，跳过前面的空格字符串，直到遇上数字或正负符号才开始做转换，再遇到非数字或字符串结束时('\0')结束转换，并将结果返回。若参数endptr不为NULL，则会将遇到不合条件而终止的nptr中的字符指针由endptr返回。<br></font></td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 返回值 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> 返回转换后的长整型数，否则返回ERANGE并将错误代码存入errno中。<br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 附加说明 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> ERANGE指定的转换字符串超出合法范围。<br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 范例 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> 参考strtol()<br></font>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="td">
+          <div class="div"><br><font class="font"><a name=toascii></a></font></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"><br></font></div>
+        </td>
+        <td class="td">
+          <font class="font"><br>toascii（将整型数转换成合法的ASCII 码字符） </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 相关函数 </font></div></td>
+        <td class="td">
+          <font class="font"> 
+            <a href="02.html#isascii">isascii</a>,
+            <a href="02.html#toupper">toupper</a>,
+            <a href="02.html#tolower">tolower</a>
+          </font></td></tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 表头文件 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> #include "ctype.h"<br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 定义函数 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> int toascii(int c)<br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 函数说明 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> toascii()会将参数c转换成7位的unsigned char值，第八位则会被清除，此字符即会被转成ASCII码字符。<br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 返回值 </font></div>
+        </td>
+        <td class="td"><font class="font"> 将转换成功的ASCII码字符值返回。<br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 范例 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> 
+            <pre class="brush: cpp;">
+              #include "stdio.h"
+              #include "ctype.h"
+
+              int main(int argc, char const *argv[])
+              {
+                  int a = 125;
+                  char b;
+
+                  printf("before toascii () : a value =%d(%c)\n", a, a);
+                  b = toascii(a);
+                  printf("after toascii() : a value =%d(%c)\n", b, b);
+
+                  return 0;
+              }
+            </pre>
+         </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 执行结果 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> 
+            <pre class="brush: cpp;">
+              before toascii () : a value =125(})
+              after toascii() : a value =125(})
+            </pre>
+          </font>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="td">
+          <div class="div"><br><font class="font"><a name=tolower></a></font></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"><br></font></div>
+        </td>
+        <td class="td">
+          <font class="font"><br>tolower（将大写字母转换成小写字母） </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 相关函数 </font></div>
+        </td>
+        <td class="td"><font class="font"> 
+          <a href="01.html#isalpha">isalpha</a>,
+          <a href="02.html#toupper">toupper</a>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 表头文件 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> #include "ctype.h"<br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 定义函数 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> int tolower(int c);<br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 函数说明 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> 若参数c为大写字母则将该对应的小写字母返回。<br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 返回值 </font></div>
+        </td>
+        <td class="td"><font class="font"> 返回转换后的小写字母，若不须转换则将参数c值返回。<br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 附加说明 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"><br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 范例 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> /* 将s字符串内的大写字母转换成小写字母*/<br>
+            <pre class="brush: cpp;">
+              #include "stdio.h"
+              #include "ctype.h"
+
+              int main(int argc, char const *argv[])
+              {
+                  char s[] = "aBcDeFgH12345;!#$";
+                  int i;
+
+                  printf("before tolower() : %s\n", s);
+                  for(i = 0; i < sizeof(s); i++)
+                      s[i]=tolower(s[i]);
+                  printf("after tolower() : %s\n",s);
+
+                  return 0;
+              }
+            </pre>
+          </font>
+          </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 执行结果 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> 
+            <pre class="brush: cpp;">
+              before tolower() : aBcDeFgH12345;!#$
+              after tolower() : abcdefgh12345;!#$
+            </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div">
+            <br><font class="font"><a name=toupper></a></font></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"><br></font></div>
+        </td>
+        <td class="td">
+          <font class="font"><br>toupper（将小写字母转换成大写字母） </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 相关函数 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> 
+            <a href="01.html#isalpha">isalpha</a>,
+            <a href="02.html#tolower">tolower</a>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 表头文件 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> #include "ctype.h"<br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 定义函数 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> int toupper(int c);<br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 函数说明 </font></div>
+        </td>
+        <td class="td"><font class="font"> 若参数c为小写字母则将该对映的大写字母返回。<br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 返回值 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"> 返回转换后的大写字母，若不须转换则将参数c值返回。<br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 附加说明 </font></div>
+        </td>
+        <td class="td">
+          <font class="font"><br></font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 范例 </font></div></td>
+        <td class="td">
+          <font class="font"> /* 将s字符串内的小写字母转换成大写字母*/<br>
+            <pre class="brush: cpp;">
+              #include "stdio.h"
+              #include "ctype.h"
+
+              int main(int argc, char const *argv[])
+              {
+                  char s[] = "aBcDeFgH12345;!#$";
+                  int i;
+
+                  printf("before toupper() : %s\n",s);
+                  for(i = 0; i < sizeof(s); i++)
+                      s[i]=toupper(s[i]);
+                  printf("after toupper() : %s\n",s);
+
+                  return 0;
+              }
+            </pre>
+          </font>
+          </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><font class="font"> 执行结果 </font></div>
+        </td>
+        <td class="td">
+          <font class="font">
+            <pre class="brush: cpp;">
+              before toupper() : aBcDeFgH12345;!#$
+              after toupper() : ABCDEFGH12345;!#$
+            </pre>
+          </font>
+        </td>
+      </tr>
+      <tr>
+        <td class="td">
+          <div class="div"><br></div>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>
