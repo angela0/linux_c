@@ -17,300 +17,337 @@
     <tr>
       <td class="td">
         <div class="div">
-          <br>
-          <font class="font"><a name=linuxc25></a></font> </div>
+          
+          <font class="font"><a name=calloc></a></font> </div>
       </td>
     </tr>
     <tr>
       <td class="td">
-        <div class="div"><font class="font"> <br>
+        <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> <br>
-      calloc（配置内存空间） </font> </td>
+      <td valign="top"> <font class="font"> calloc（配置内存空间） </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> malloc，free，realloc，brk<br>
+      <td valign="top"> <font class="font"> 
+        <a href="03.html#malloc">malloc</a>,
+        <a href="03.html#free">free</a>,
+        <a href="03.html#realloc">realloc</a>,
+        <a href="03.html#brk">brk</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include &lt;stdlib.h&gt;<br>
+      <td valign="top"> <font class="font"> #include "stdlib.h"
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> void *calloc(size_t nmemb，size_t 
-      size);<br>
+      <td valign="top"> <font class="font"> void *calloc(size_t nmemb，size_t size);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> calloc()用来配置nmemb个相邻的内存单位，每一单位的大小为size，并返回指向第一个元素的指针。这和使用下列的方式效果相同:malloc(nmemb*size);不过，在利用calloc()配置内存时会将内存内容初始化为0。<br>
+      <td valign="top"> <font class="font"> calloc()用来配置nmemb个相邻的内存单位，每一单位的大小为size，并返回指向第一个元素的指针。这和使用下列的方式效果相同:malloc(nmemb*size);不过，在利用calloc()配置内存时会将内存内容初始化为0。
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 返回值 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 若配置成功则返回一指针，失败则返回NULL。<br>
+      <td valign="top"> <font class="font"> 若配置成功则返回一指针，失败则返回NULL。
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 范例 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> /* 动态配置10个struct test 空间*/<br>
-      #include&lt;stdlib.h&gt;<br>
-      struct test<br>
-      {<br>
-      int a[10];<br>
-      char b[20];<br>
-      }<br>
-      main()<br>
-      {<br>
-      struct test *ptr=calloc(sizeof(struct test),10);<br>
-      }<br>
+      <td valign="top"> <font class="font"> /* 动态配置10个struct test 空间*/
+      <pre class="brush: cpp;">
+        #include "stdlib.h"
+
+        struct test
+        {
+            int a[10];
+            char b[20];
+        };
+
+        int main(int argc, char const *argv[])
+        {
+            struct test *ptr = (struct test*)calloc(sizeof(struct test), 10);
+            return 0;
+        }
+      </pre>
       </font> </td>
     </tr>
+    <br/>
+    
     <tr>
       <td class="td">
         <div class="div">
-          <br>
-          <font class="font"><a name=linuxc26></a></font> </div>
+          
+          <font class="font"><a name=free></a></font> </div>
       </td>
     </tr>
     <tr>
       <td class="td">
-        <div class="div"><font class="font"> <br>
+        <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> <br>
-      free（释放原先配置的内存） </font> </td>
+      <td valign="top"> <font class="font"> free（释放原先配置的内存） </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> malloc，calloc，realloc，brk<br>
+      <td valign="top"> <font class="font"> 
+        <a href="03.html#malloc">malloc</a>,
+        <a href="03.html#calloc">calloc</a>,
+        <a href="03.html#realloc">realloc</a>,
+        <a href="03.html#brk">brk</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include&lt;stdlib.h&gt;<br>
+      <td valign="top"> <font class="font"> #include "stdlib.h"
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> void free(void *ptr);<br>
+      <td valign="top"> <font class="font"> void free(void *ptr);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 参数ptr为指向先前由malloc()、calloc()或realloc()所返回的内存指针。调用free()后ptr所指的内存空间便会被收回。假若参数ptr所指的内存空间已被收回或是未知的内存地址，则调用free()可能会有无法预期的情况发生。若参数ptr为NULL，则free()不会有任何作用。<br>
+      <td valign="top"> <font class="font"> 参数ptr为指向先前由malloc()、calloc()或realloc()所返回的内存指针。调用free()后ptr所指的内存空间便会被收回。假若参数ptr所指的内存空间已被收回或是未知的内存地址，则调用free()可能会有无法预期的情况发生。若参数ptr为NULL，则free()不会有任何作用。
       </font> </td>
     </tr>
+    <br/>
+    
     <tr>
       <td class="td">
         <div class="div">
-          <br>
-          <font class="font"><a name=linuxc27></a></font> </div>
+          
+          <font class="font"><a name=getpagesize></a></font> </div>
       </td>
     </tr>
     <tr>
       <td class="td">
-        <div class="div"><font class="font"> <br>
+        <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> <br>
-      getpagesize（取得内存分页大小） </font> </td>
+      <td valign="top"> <font class="font"> getpagesize（取得内存分页大小） </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> sbrk<br>
+      <td valign="top"> <font class="font"> 
+        <a href="03.html#sbrk">sbrk</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include&lt;unistd.h&gt;<br>
+      <td valign="top"> <font class="font"> #include "unistd.h"
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> size_t getpagesize(void);<br>
+      <td valign="top"> <font class="font"> size_t getpagesize(void);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 返回一分页的大小，单位为字节（byte）。此为系统的分页大小，不一定会和硬件分页大小相同。<br>
+      <td valign="top"> <font class="font"> 返回一分页的大小，单位为字节（byte）。此为系统的分页大小，不一定会和硬件分页大小相同。
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 返回值 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 内存分页大小。附加说明在Intel x86 上其返回值应为4096bytes。<br>
+      <td valign="top"> <font class="font"> 内存分页大小。附加说明在Intel x86 上其返回值应为4096bytes。
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 范例 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include &lt;unistd.h&gt;<br>
-      main()<br>
-      {<br>
-      printf(“page size = %d\n”,getpagesize( ) );<br>
-      }<br>
+      <td valign="top"> <font class="font"> 
+        <pre class="brush: cpp;">
+          #include "stdio.h"
+          #include "unistd.h"
+
+          int main(int argc, char const *argv[])
+          {
+              printf("page size = % d\n", getpagesize());
+              return 0;
+          }
+        </pre>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div">
-          <br>
-          <font class="font"><a name=linuxc28></a></font> </div>
+          
+          <font class="font"><a name=malloc></a></font> </div>
       </td>
     </tr>
     <tr>
       <td class="td">
-        <div class="div"><font class="font"> <br>
+        <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> <br>
-      malloc（配置内存空间） </font> </td>
+      <td valign="top"> <font class="font"> malloc（配置内存空间） </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> calloc，free，realloc，brk<br>
+      <td valign="top"> <font class="font"> 
+        <a href="03.html#free">free</a>,
+        <a href="03.html#calloc">calloc</a>,
+        <a href="03.html#realloc">realloc</a>,
+        <a href="03.html#brk">brk</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include&lt;stdlib.h&gt;<br>
+      <td valign="top"> <font class="font"> #include "stdlib.h"
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> void * malloc(size_t size);<br>
+      <td valign="top"> <font class="font"> void * malloc(size_t size);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> malloc()用来配置内存空间，其大小由指定的size决定。<br>
+      <td valign="top"> <font class="font"> malloc()用来配置内存空间，其大小由指定的size决定。
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 返回值 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 若配置成功则返回一指针，失败则返回NULL。<br>
+      <td valign="top"> <font class="font"> 若配置成功则返回一指针，失败则返回NULL。
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 范例 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> void p = malloc(1024); /*配置1k的内存*/<br>
+      <td valign="top"> <font class="font"> 
+        <pre class="brush: cpp;">
+          #include "stdio.h"
+          #include "stdlib.h"
+
+          int main(int argc, char const *argv[])
+          {
+              int *p = (int *)malloc(100*sizeof(int));
+              if(p==NULL)
+                  printf("malloc error!\n");
+              else
+                  printf("%p\n", p);
+              return 0;
+          }
+        </pre>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div">
-          <br>
-          <font class="font"><a name=linuxc29></a></font> </div>
+          
+          <font class="font"><a name=mmap></a></font> </div>
       </td>
     </tr>
     <tr>
       <td class="td">
-        <div class="div"><font class="font"> <br>
+        <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> <br>
-      mmap（建立内存映射） </font> </td>
+      <td valign="top"> <font class="font"> mmap（建立内存映射） </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> munmap，open<br>
+      <td valign="top"> <font class="font"> 
+        <a href="03.html#munmap">munmap</a>,
+        <a href="03.html#open">open</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include &lt;unistd.h&gt;<br>
-      #include &lt;sys/mman.h&gt;<br>
+      <td valign="top"> <font class="font"> #include "unistd.h"
+      #include "sys/mman.h"
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> void *mmap(void *start,size_t 
-      length,int prot,int flags,int fd,off_t offsize);<br>
+      <td valign="top"> <font class="font"> void *mmap(void *start,size_t length,int prot,int flags,int fd,off_t offsize);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> mmap()用来将某个文件内容映射到内存中，对该内存区域的存取即是直接对该文件内容的读写。参数start指向欲对应的内存起始地址，通常设为NULL，代表让系统自动选定地址，对应成功后该地址会返回。参数length代表将文件中多大的部分对应到内存。<br>
+      <td valign="top"> <font class="font"> mmap()用来将某个文件内容映射到内存中，对该内存区域的存取即是直接对该文件内容的读写。参数start指向欲对应的内存起始地址，通常设为NULL，代表让系统自动选定地址，对应成功后该地址会返回。参数length代表将文件中多大的部分对应到内存。
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 参数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> prot代表映射区域的保护方式有下列组合<br>
-      PROT_EXEC 映射区域可被执行<br>
-      PROT_READ 映射区域可被读取<br>
-      PROT_WRITE 映射区域可被写入<br>
-      PROT_NONE 映射区域不能存取<br>
+      <td valign="top"> <font class="font"> prot代表映射区域的保护方式有下列组合
+      PROT_EXEC 映射区域可被执行
+      PROT_READ 映射区域可被读取
+      PROT_WRITE 映射区域可被写入
+      PROT_NONE 映射区域不能存取
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 参数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> flags会影响映射区域的各种特性<br>
-      MAP_FIXED 如果参数start所指的地址无法成功建立映射时，则放弃映射，不对地址做修正。通常不鼓励用此旗标。<br>
-      MAP_SHARED对映射区域的写入数据会复制回文件内，而且允许其他映射该文件的进程共享。<br>
-      MAP_PRIVATE 对映射区域的写入操作会产生一个映射文件的复制，即私人的“写入时复制”（copy on write）对此区域作的任何修改都不会写回原来的文件内容。<br>
-      MAP_ANONYMOUS建立匿名映射。此时会忽略参数fd，不涉及文件，而且映射区域无法和其他进程共享。<br>
-      MAP_DENYWRITE只允许对映射区域的写入操作，其他对文件直接写入的操作将会被拒绝。<br>
-      MAP_LOCKED 将映射区域锁定住，这表示该区域不会被置换（swap）。<br>
-      在调用mmap()时必须要指定MAP_SHARED 或MAP_PRIVATE。参数fd为open()返回的文件描述词，代表欲映射到内存的文件。参数offset为文件映射的偏移量，通常设置为0，代表从文件最前方开始对应，offset必须是分页大小的整数倍。<br>
+      <td valign="top"> <font class="font"> flags会影响映射区域的各种特性
+      MAP_FIXED 如果参数start所指的地址无法成功建立映射时，则放弃映射，不对地址做修正。通常不鼓励用此旗标。
+      MAP_SHARED对映射区域的写入数据会复制回文件内，而且允许其他映射该文件的进程共享。
+      MAP_PRIVATE 对映射区域的写入操作会产生一个映射文件的复制，即私人的"写入时复制"（copy on write）对此区域作的任何修改都不会写回原来的文件内容。
+      MAP_ANONYMOUS建立匿名映射。此时会忽略参数fd，不涉及文件，而且映射区域无法和其他进程共享。
+      MAP_DENYWRITE只允许对映射区域的写入操作，其他对文件直接写入的操作将会被拒绝。
+      MAP_LOCKED 将映射区域锁定住，这表示该区域不会被置换（swap）。
+      在调用mmap()时必须要指定MAP_SHARED 或MAP_PRIVATE。参数fd为open()返回的文件描述词，代表欲映射到内存的文件。参数offset为文件映射的偏移量，通常设置为0，代表从文件最前方开始对应，offset必须是分页大小的整数倍。
       </font> </td>
     </tr>
     <tr>
@@ -318,142 +355,170 @@
         <div class="div"><font class="font"> 返回值 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 若映射成功则返回映射区的内存起始地址，否则返回MAP_FAILED(－1)，错误原因存于errno 
-      中。<br>
+      中。
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 错误代码 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> EBADF 参数fd 不是有效的文件描述词<br>
-      EACCES 存取权限有误。如果是MAP_PRIVATE 情况下文件必须可读，使用MAP_SHARED则要有PROT_WRITE以及该文件要能写入。<br>
-      EINVAL 参数start、length 或offset有一个不合法。<br>
-      EAGAIN 文件被锁住，或是有太多内存被锁住。<br>
-      ENOMEM 内存不足。<br>
+      <td valign="top"> <font class="font"> EBADF 参数fd 不是有效的文件描述词
+      EACCES 存取权限有误。如果是MAP_PRIVATE 情况下文件必须可读，使用MAP_SHARED则要有PROT_WRITE以及该文件要能写入。
+      EINVAL 参数start、length 或offset有一个不合法。
+      EAGAIN 文件被锁住，或是有太多内存被锁住。
+      ENOMEM 内存不足。
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 范例 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> /* 利用mmap()来读取/etc/passwd 文件内容*/<br>
-      #include&lt;sys/types.h&gt;<br>
-      #include&lt;sys/stat.h&gt;<br>
-      #include&lt;fcntl.h&gt;<br>
-      #include&lt;unistd.h&gt;<br>
-      #include&lt;sys/mman.h&gt;<br>
-      main()<br>
-      {<br>
-      int fd;<br>
-      void *start;<br>
-      struct stat sb;<br>
-      fd=open(“/etc/passwd”,O_RDONLY); /*打开/etc/passwd*/<br>
-      fstat(fd,&sb); /*取得文件大小*/<br>
-      start=mmap(NULL,sb.st_size,PROT_READ,MAP_PRIVATE,fd,0);<br>
-      if(start= = MAP_FAILED) /*判断是否映射成功*/<br>
-      return;<br>
-      printf(“%s”,start);<br>
-      munma(start,sb.st_size); /*解除映射*/<br>
-      closed(fd);<br>
-      }<br>
+      <td valign="top"> <font class="font"> /* 利用mmap()来读取/etc/passwd 文件内容*/
+        <pre class="brush: cpp;">
+          #include "stdio.h"
+          #include "sys/types.h"
+          #include "sys/stat.h"
+          #include "fcntl.h"
+          #include "unistd.h"
+          #include "sys/mman.h"
+
+          int main(int argc, char const *argv[])
+          {
+              int fd;
+              char *start;
+              struct stat sb;
+              fd = open("/etc/passwd", O_RDONLY); /*打开/etc/passwd*/
+              fstat(fd, &sb); /*取得文件大小*/
+              start = (char *)mmap(NULL, sb.st_size, PROT_READ, MAP_PRIVATE, fd, 0);
+              if (start==MAP_FAILED) /*判断是否映射成功*/
+                  return -1;
+              printf("%s", start);
+              munmap(start, sb.st_size); /*解除映射*/
+              close(fd);
+
+              return 0;
+          }
+        </pre>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 执行 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> root : x : 0 : root : /root : 
-      /bin/bash<br>
-      bin : x : 1 : 1 : bin : /bin :<br>
-      daemon : x : 2 : 2 :daemon : /sbin<br>
-      adm : x : 3 : 4 : adm : /var/adm :<br>
-      lp : x :4 :7 : lp : /var/spool/lpd :<br>
-      sync : x : 5 : 0 : sync : /sbin : bin/sync :<br>
-      shutdown : x : 6 : 0 : shutdown : /sbin : /sbin/shutdown<br>
-      halt : x : 7 : 0 : halt : /sbin : /sbin/halt<br>
-      mail : x : 8 : 12 : mail : /var/spool/mail :<br>
-      news : x :9 :13 : news : /var/spool/news :<br>
-      uucp : x :10 :14 : uucp : /var/spool/uucp :<br>
-      operator : x : 11 : 0 :operator : /root:<br>
-      games : x : 12 :100 : games :/usr/games:<br>
-      gopher : x : 13 : 30 : gopher : /usr/lib/gopher-data:<br>
-      ftp : x : 14 : 50 : FTP User : /home/ftp:<br>
-      nobody : x :99: 99: Nobody : /:<br>
-      xfs :x :100 :101 : X Font Server : /etc/xll/fs : /bin/false<br>
-      gdm : x : 42 :42 : : /home/gdm: /bin/bash<br>
-      kids : x : 500 :500 :/home/kids : /bin/bash<br>
+      <td valign="top"> <font class="font"> 
+        <pre class="brush: cpp;">
+          root:x:0:0:root:/root:/bin/bash
+          daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+          bin:x:2:2:bin:/bin:/usr/sbin/nologin
+          sys:x:3:3:sys:/dev:/usr/sbin/nologin
+          sync:x:4:65534:sync:/bin:/bin/sync
+          games:x:5:60:games:/usr/games:/usr/sbin/nologin
+          man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+          lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+          mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+          news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+          uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+          proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+          www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+          backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+          list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+          irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+          gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+          nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+          libuuid:x:100:101::/var/lib/libuuid:
+          syslog:x:101:104::/home/syslog:/bin/false
+          messagebus:x:102:106::/var/run/dbus:/bin/false
+          usbmux:x:103:46:usbmux daemon,,,:/home/usbmux:/bin/false
+          dnsmasq:x:104:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+          ntp:x:105:110::/home/ntp:/bin/false
+          avahi-autoipd:x:106:116:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
+          dirmngr:x:107:117::/var/cache/dirmngr:/bin/sh
+          speech-dispatcher:x:108:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/sh
+          kernoops:x:109:65534:Kernel Oops Tracking Daemon,,,:/:/bin/false
+          avahi:x:110:118:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+          colord:x:111:120:colord colour management daemon,,,:/var/lib/colord:/bin/false
+          hplip:x:112:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+          pulse:x:113:121:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+          mdm:x:114:123:MDM Display Manager:/var/lib/mdm:/bin/false
+          rtkit:x:115:125:RealtimeKit,,,:/proc:/bin/false
+          saned:x:116:126::/home/saned:/bin/false
+          davfs2:x:117:127::/var/cache/davfs2:/bin/false
+          angela:x:1000:1000:Angela,,,:/home/angela:/bin/bash
+          mongodb:x:118:65534::/home/mongodb:/bin/false
+          sshd:x:119:65534::/var/run/sshd:/usr/sbin/nologin
+          postfix:x:120:129::/var/spool/postfix:/bin/false
+        </pre>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div">
-          <br>
-          <font class="font"><a name=linuxc30></a></font> </div>
+          
+          <font class="font"><a name=munmap></a></font> </div>
       </td>
     </tr>
     <tr>
       <td class="td">
-        <div class="div"><font class="font"> <br>
+        <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> <br>
-      munmap（解除内存映射） </font> </td>
+      <td valign="top"> <font class="font"> munmap（解除内存映射） </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> mmap<br>
+      <td valign="top"> <font class="font"> 
+        <a href="03.html#mmap">mmap</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include&lt;unistd.h&gt;<br>
-      #include&lt;sys/mman.h&gt;<br>
+      <td valign="top"> <font class="font"> #include "unistd.h"
+      #include"sys/mman.h"
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int munmap(void *start,size_t 
-      length);<br>
+      <td valign="top"> <font class="font"> int munmap(void *start,size_t length);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> munmap()用来取消参数start所指的映射内存起始地址，参数length则是欲取消的内存大小。当进程结束或利用exec相关函数来执行其他程序时，映射内存会自动解除，但关闭对应的文件描述词时不会解除映射。<br>
+      <td valign="top"> <font class="font"> munmap()用来取消参数start所指的映射内存起始地址，参数length则是欲取消的内存大小。当进程结束或利用exec相关函数来执行其他程序时，映射内存会自动解除，但关闭对应的文件描述词时不会解除映射。
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 返回值 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 如果解除映射成功则返回0，否则返回－1，错误原因存于errno中错误代码EINVAL<br>
+      <td valign="top"> <font class="font"> 如果解除映射成功则返回0，否则返回－1，错误原因存于errno中错误代码EINVAL
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 参数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> start或length 不合法。<br>
+      <td valign="top"> <font class="font"> start或length 不合法。
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 范例 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 参考mmap（）<br>
+      <td valign="top"> <font class="font"> 参考mmap（）
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div">
-          <br>
+          
         </div>
       </td>
     </tr>
