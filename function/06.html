@@ -5,1496 +5,1525 @@
     <script type="text/javascript" src="../scripts/shCore.js"></script>
     <script type="text/javascript" src="../scripts/shBrushCpp.js"></script>
     <link type="text/css" rel="stylesheet" href="../styles/shCoreDefault.css"/>
+  <link type="text/css" rel="stylesheet" href="../styles/all.css" />
     <script type="text/javascript">SyntaxHighlighter.all();</script>
 </head>
 <body>
-<table>
+<table class="table">
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc70></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=abs></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
-      abs（计算整型数的绝对值） </font> </td>
+    <td valign="top"> <font class="font">  abs（计算整型数的绝对值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> labs, fabs<br>
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#labs">labs</a>,
+      <a href="06.html#fabs">fabs</a>
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;stdlib.h&gt;<br>
+    <td valign="top"> <font class="font"> #include "stdlib.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> int abs (int j)<br>
+    <td valign="top"> <font class="font"> int abs (int j)
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> abs()用来计算参数j的绝对值，然后将结果返回。<br>
+    <td valign="top"> <font class="font"> abs()用来计算参数j的绝对值，然后将结果返回。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回参数j的绝对值结果。<br>
+    <td valign="top"> <font class="font"> 返回参数j的绝对值结果。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #ingclude &lt;stdlib.h&gt;<br>
-      main(){<br>
-      int ansert;<br>
-      answer = abs(-12);<br>
-      printf("|-12| = %d\n", answer);<br>
-      }<br>
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+        #include "stdlib.h"
+        #include "stdio.h"
+
+        int main(int argc, char const *argv[])
+        {
+            int ansert;
+            int answer = abs(-12);
+            printf("|-12| = %d\n", answer);
+
+            return 0;
+        }
+      </pre>
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> |-12| = 12<br>
+    <td valign="top"> <font class="font">
+      <pre class="brush: cpp;">
+        |-12| = 12
+      </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc71></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=acos></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
-      acos（取反余弦函数数值） </font> </td>
+    <td valign="top"> <font class="font"> acos（取反余弦函数数值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> asin , atan , atan2 , cos , sin 
-      , tan<br>
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#asin">asin</a>,
+      <a href="06.html#atan">atan</a>,
+      <a href="06.html#atan2">atan2</a>,
+      <a href="06.html#cos">cos</a>,
+      <a href="06.html#sin">sin</a>,
+      <a href="06.html#tan">tan</a>
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include &lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double acos (double x);<br>
+    <td valign="top"> <font class="font"> double acos(double x);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> acos()用来计算参数x的反余弦值，然后将结果返回。参数x范围为－1至1之间，超过此范围则会失败。<br>
+    <td valign="top"> <font class="font"> acos()用来计算参数x的反余弦值，然后将结果返回。参数x范围为－1至1之间，超过此范围则会失败。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回0至PI之间的计算结果，单位为弧度，在函数库中角度均以弧度来表示。<br>
+    <td valign="top"> <font class="font"> 返回0至PI之间的计算结果，单位为弧度，在函数库中角度均以弧度来表示。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 错误代码 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 错误代码 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> EDOM参数x超出范围。<br>
+    <td valign="top"> <font class="font"> EDOM参数x超出范围。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入－lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入－lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include &lt;math.h&gt;<br>
-      main (){<br>
-      double angle;<br>
-      angle = acos(0.5);<br>
-      printf("angle = %f\n", angle);<br>
-      }<br>
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          #include  "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              double angle;
+              angle = acos(0.5);
+              printf("angle = %f\n", angle);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> angle = 1.047198<br>
-      </font> </td>
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          angle = 1.047198
+      </pre>
+    </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc72></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc72></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       asin（取反正弦函数值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> acos , atan , atan2 , cos , sin 
-      , tan<br>
+    <td valign="top"> <font class="font"> acos , atan , atan2 , cos , sin 
+      , tan
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include &lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include  "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double asin (double x)<br>
+    <td valign="top"> <font class="font"> double asin (double x)
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> asin()用来计算参数x的反正弦值，然后将结果返回。参数x范围为－1至1之间，超过此范围则会失败。<br>
+    <td valign="top"> <font class="font"> asin()用来计算参数x的反正弦值，然后将结果返回。参数x范围为－1至1之间，超过此范围则会失败。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回－PI/2之PI/2之间的计算结果。<br>
+    <td valign="top"> <font class="font"> 返回－PI/2之PI/2之间的计算结果。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 错误代码 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 错误代码 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> EDOM参数x超出范围<br>
+    <td valign="top"> <font class="font"> EDOM参数x超出范围
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入－lm<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入－lm
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      double angle;<br>
-      angle = asin (0.5);<br>
-      printf("angle = %f\n",angle);<br>
-      }<br>
+    <td valign="top"> <font class="font"> #include "math.h"
+      main()
+      {
+      double angle;
+      angle = asin (0.5);
+      printf("angle = %f\n",angle);
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> angle = 0.523599<br>
+    <td valign="top"> <font class="font"> angle = 0.523599
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc73></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc73></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       atan（取反正切函数值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> acos，asin，atan2，cos，sin，tan<br>
+    <td valign="top"> <font class="font"> acos，asin，atan2，cos，sin，tan
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double atan(double x);<br>
+    <td valign="top"> <font class="font"> double atan(double x);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> atan()用来计算参数x的反正切值，然后将结果返回。<br>
+    <td valign="top"> <font class="font"> atan()用来计算参数x的反正切值，然后将结果返回。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回-PI/2至PI/2之间的计算结果。<br>
+    <td valign="top"> <font class="font"> 返回-PI/2至PI/2之间的计算结果。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      double angle;<br>
-      angle =atan(1);<br>
-      printf("angle = %f\n",angle);<br>
-      }<br>
+    <td valign="top"> <font class="font"> #include "math.h"
+      main()
+      {
+      double angle;
+      angle =atan(1);
+      printf("angle = %f\n",angle);
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> angle = 1.570796<br>
+    <td valign="top"> <font class="font"> angle = 1.570796
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc74></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc74></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       atan2（取得反正切函数值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> acos，asin，atan，cos，sin，tan<br>
+    <td valign="top"> <font class="font"> acos，asin，atan，cos，sin，tan
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double atan2(double y,double x);<br>
+    <td valign="top"> <font class="font"> double atan2(double y,double x);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> atan2()用来计算参数y/x的反正切值，然后将结果返回。<br>
+    <td valign="top"> <font class="font"> atan2()用来计算参数y/x的反正切值，然后将结果返回。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回-PI 至PI 之间的计算结果。<br>
+    <td valign="top"> <font class="font"> 返回-PI 至PI 之间的计算结果。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      double angle;<br>
-      angle = atan2(1,2);<br>
-      printf("angle = %f\n", angle);<br>
-      }<br>
+    <td valign="top"> <font class="font"> #include "math.h"
+      main()
+      {
+      double angle;
+      angle = atan2(1,2);
+      printf("angle = %f\n", angle);
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> angle = 0.463648<br>
+    <td valign="top"> <font class="font"> angle = 0.463648
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc75></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc75></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       ceil（取不小于参数的最小整型数） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> fabs<br>
+    <td valign="top"> <font class="font"> fabs
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include &lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include  "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double ceil (double x);<br>
+    <td valign="top"> <font class="font"> double ceil (double x);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> ceil()会返回不小于参数x的最小整数值，结果以double形态返回。<br>
+    <td valign="top"> <font class="font"> ceil()会返回不小于参数x的最小整数值，结果以double形态返回。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回不小于参数x的最小整数值。<br>
+    <td valign="top"> <font class="font"> 返回不小于参数x的最小整数值。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      double value[ ]={4.8,1.12,-2.2,0};<br>
-      int i;<br>
-      for (i=0;value[i]!=0;i++)<br>
-      printf("%f=&gt;%f\n",value[i],ceil(value[i]));<br>
-      }<br>
+    <td valign="top"> <font class="font"> #include "math.h"
+      main()
+      {
+      double value[ ]={4.8,1.12,-2.2,0};
+      int i;
+      for (i=0;value[i]!=0;i++)
+      printf("%f="%f\n",value[i],ceil(value[i]));
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 4.800000=&gt;5.000000<br>
-      1.120000=&gt;2.000000<br>
-      -2.200000=&gt;-2.000000<br>
+    <td valign="top"> <font class="font"> 4.800000="5.000000
+      1.120000="2.000000
+      -2.200000="-2.000000
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc76></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc76></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       cos（取余玄函数值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> acos，asin，atan，atan2，sin，tan<br>
+    <td valign="top"> <font class="font"> acos，asin，atan，atan2，sin，tan
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double cos(double x);<br>
+    <td valign="top"> <font class="font"> double cos(double x);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> cos()用来计算参数x 的余玄值，然后将结果返回。<br>
+    <td valign="top"> <font class="font"> cos()用来计算参数x 的余玄值，然后将结果返回。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回-1至1之间的计算结果。<br>
+    <td valign="top"> <font class="font"> 返回-1至1之间的计算结果。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      double answer = cos(0.5);<br>
-      printf("cos (0.5) = %f\n",answer);<br>
-      }<br>
+    <td valign="top"> <font class="font"> #include "math.h"
+      main()
+      {
+      double answer = cos(0.5);
+      printf("cos (0.5) = %f\n",answer);
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> cos(0.5) = 0.877583<br>
+    <td valign="top"> <font class="font"> cos(0.5) = 0.877583
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc77></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc77></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       cosh（取双曲线余玄函数值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> sinh，tanh<br>
+    <td valign="top"> <font class="font"> sinh，tanh
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double cosh(double x);<br>
+    <td valign="top"> <font class="font"> double cosh(double x);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> cosh()用来计算参数x的双曲线余玄值，然后将结果返回。数学定义式为:(exp(x)+exp(-x))/2。<br>
+    <td valign="top"> <font class="font"> cosh()用来计算参数x的双曲线余玄值，然后将结果返回。数学定义式为:(exp(x)+exp(-x))/2。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回参数x的双曲线余玄值。<br>
+    <td valign="top"> <font class="font"> 返回参数x的双曲线余玄值。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      double answer = cosh(0.5);<br>
-      printf("cosh(0.5) = %f\n",answer);<br>
-      }<br>
+    <td valign="top"> <font class="font"> #include "math.h"
+      main()
+      {
+      double answer = cosh(0.5);
+      printf("cosh(0.5) = %f\n",answer);
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> cosh(0.5) = 1.127626<br>
+    <td valign="top"> <font class="font"> cosh(0.5) = 1.127626
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc78></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc78></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       exp（计算指数） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> log，log10，pow<br>
+    <td valign="top"> <font class="font"> log，log10，pow
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double exp(double x);<br>
+    <td valign="top"> <font class="font"> double exp(double x);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> exp()用来计算以e为底的x次方值，即ex值，然后将结果返回。<br>
+    <td valign="top"> <font class="font"> exp()用来计算以e为底的x次方值，即ex值，然后将结果返回。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回e的x次方计算结果。<br>
+    <td valign="top"> <font class="font"> 返回e的x次方计算结果。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      double answer;<br>
-      answer = exp (10);<br>
-      printf("e^10 =%f\n", answer);<br>
-      }<br>
+    <td valign="top"> <font class="font"> #include "math.h"
+      main()
+      {
+      double answer;
+      answer = exp (10);
+      printf("e^10 =%f\n", answer);
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> e^10 = 22026.465795<br>
+    <td valign="top"> <font class="font"> e^10 = 22026.465795
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc79></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc79></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       frexp（将浮点型数分为底数与指数） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> ldexp，modf<br>
+    <td valign="top"> <font class="font"> ldexp，modf
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double frexp( double x, int *exp);<br>
+    <td valign="top"> <font class="font"> double frexp( double x, int *exp);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> frexp()用来将参数x 的浮点型数切割成底数和指数。底数部分直接返回，指数部分则借参数exp 
-      指针返回，将返回值乘以2 的exp次方即为x的值。<br>
+    <td valign="top"> <font class="font"> frexp()用来将参数x 的浮点型数切割成底数和指数。底数部分直接返回，指数部分则借参数exp 
+      指针返回，将返回值乘以2 的exp次方即为x的值。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回参数x的底数部分，指数部分则存于exp指针所指的地址。<br>
+    <td valign="top"> <font class="font"> 返回参数x的底数部分，指数部分则存于exp指针所指的地址。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include &lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      int exp;<br>
-      double fraction;<br>
-      fraction = frexp (1024,&exp);<br>
-      printf("exp = %d\n",exp);<br>
-      printf("fraction = %f\n", fraction);<br>
-      }<br>
+    <td valign="top"> <font class="font"> #include  "math.h"
+      main()
+      {
+      int exp;
+      double fraction;
+      fraction = frexp (1024,&exp);
+      printf("exp = %d\n",exp);
+      printf("fraction = %f\n", fraction);
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> exp = 11<br>
-      fraction = 0.500000 /* 0.5*(2^11)=1024*/<br>
+    <td valign="top"> <font class="font"> exp = 11
+      fraction = 0.500000 /* 0.5*(2^11)=1024*/
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc80></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc80></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       ldexp（计算2的次方值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> frexp<br>
+    <td valign="top"> <font class="font"> frexp
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double ldexp(double x,int exp);<br>
+    <td valign="top"> <font class="font"> double ldexp(double x,int exp);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> ldexp()用来将参数x乘上2的exp次方值，即x*2exp。<br>
+    <td valign="top"> <font class="font"> ldexp()用来将参数x乘上2的exp次方值，即x*2exp。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回计算结果。<br>
+    <td valign="top"> <font class="font"> 返回计算结果。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例: </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例: </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> /* 计算3*(2^2)＝12 */<br>
-      #include&lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      int exp;<br>
-      double x,answer;<br>
-      answer = ldexp(3,2);<br>
-      printf("3*2^(2) = %f\n",answer);<br>
-      }<br>
+    <td valign="top"> <font class="font"> /* 计算3*(2^2)＝12 */
+      #include "math.h"
+      main()
+      {
+      int exp;
+      double x,answer;
+      answer = ldexp(3,2);
+      printf("3*2^(2) = %f\n",answer);
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 3*2^(2) = 12.000000<br>
+    <td valign="top"> <font class="font"> 3*2^(2) = 12.000000
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc81></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc81></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       log（计算以e 为底的对数值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> exp，log10，pow<br>
+    <td valign="top"> <font class="font"> exp，log10，pow
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include &lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include  "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double log (double x);<br>
+    <td valign="top"> <font class="font"> double log (double x);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> log（）用来计算以e为底的x 对数值，然后将结果返回。<br>
+    <td valign="top"> <font class="font"> log（）用来计算以e为底的x 对数值，然后将结果返回。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回参数x的自然对数值。<br>
+    <td valign="top"> <font class="font"> 返回参数x的自然对数值。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 错误代码 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 错误代码 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> EDOM 参数x为负数，ERANGE 参数x为零值，零的对数值无定义。<br>
+    <td valign="top"> <font class="font"> EDOM 参数x为负数，ERANGE 参数x为零值，零的对数值无定义。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      double answer;<br>
-      answer = log (100);<br>
-      printf("log(100) = %f\n",answer);<br>
-      }<br>
+    <td valign="top"> <font class="font"> #include "math.h"
+      main()
+      {
+      double answer;
+      answer = log (100);
+      printf("log(100) = %f\n",answer);
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> log(100) = 4.605170<br>
+    <td valign="top"> <font class="font"> log(100) = 4.605170
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc82></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc82></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       log10（计算以10 为底的对数值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> exp，log，pow<br>
+    <td valign="top"> <font class="font"> exp，log，pow
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double log10(double x);<br>
+    <td valign="top"> <font class="font"> double log10(double x);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> log10()用来计算以10为底的x对数值，然后将结果返回。<br>
+    <td valign="top"> <font class="font"> log10()用来计算以10为底的x对数值，然后将结果返回。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回参数x以10为底的对数值。<br>
+    <td valign="top"> <font class="font"> 返回参数x以10为底的对数值。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 错误代码 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 错误代码 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> EDOM参数x为负数。RANGE参数x为零值，零的对数值无定义。<br>
+    <td valign="top"> <font class="font"> EDOM参数x为负数。RANGE参数x为零值，零的对数值无定义。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      double answer;<br>
-      answer = log10(100);<br>
-      printf("log10(100) = %f\n",answer);<br>
-      }<br>
+    <td valign="top"> <font class="font"> #include "math.h"
+      main()
+      {
+      double answer;
+      answer = log10(100);
+      printf("log10(100) = %f\n",answer);
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> log10(100) = 2.000000<br>
+    <td valign="top"> <font class="font"> log10(100) = 2.000000
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc83></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc83></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       pow（计算次方值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> exp，log，log10<br>
+    <td valign="top"> <font class="font"> exp，log，log10
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double pow(double x,double y);<br>
+    <td valign="top"> <font class="font"> double pow(double x,double y);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> pow()用来计算以x为底的y次方值，即xy值，然后将结果返回。<br>
+    <td valign="top"> <font class="font"> pow()用来计算以x为底的y次方值，即xy值，然后将结果返回。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回x的y次方计算结果。<br>
+    <td valign="top"> <font class="font"> 返回x的y次方计算结果。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 错误代码 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 错误代码 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> EDOM 参数x为负数且参数y不是整数。<br>
+    <td valign="top"> <font class="font"> EDOM 参数x为负数且参数y不是整数。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include &lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      double answer;<br>
-      answer =pow(2,10);<br>
-      printf("2^10 = %f\n", answer);<br>
-      }<br>
+    <td valign="top"> <font class="font"> #include  "math.h"
+      main()
+      {
+      double answer;
+      answer =pow(2,10);
+      printf("2^10 = %f\n", answer);
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 2^10 = 1024.000000<br>
+    <td valign="top"> <font class="font"> 2^10 = 1024.000000
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc84></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc84></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       sin（取正玄函数值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> acos，asin，atan，atan2，cos，tan<br>
+    <td valign="top"> <font class="font"> acos，asin，atan，atan2，cos，tan
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double sin(double x);<br>
+    <td valign="top"> <font class="font"> double sin(double x);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> sin（）用来计算参数x的正玄值，然后将结果返回。<br>
+    <td valign="top"> <font class="font"> sin（）用来计算参数x的正玄值，然后将结果返回。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回-1 至1之间的计算结果。<br>
+    <td valign="top"> <font class="font"> 返回-1 至1之间的计算结果。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      double answer = sin (0.5);<br>
-      printf("sin(0.5) = %f\n",answer);<br>
-      }<br>
+    <td valign="top"> <font class="font"> #include "math.h"
+      main()
+      {
+      double answer = sin (0.5);
+      printf("sin(0.5) = %f\n",answer);
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> sin(0.5) = 0.479426<br>
+    <td valign="top"> <font class="font"> sin(0.5) = 0.479426
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc85></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc85></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       sinh（取双曲线正玄函数值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> cosh，tanh<br>
+    <td valign="top"> <font class="font"> cosh，tanh
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double sinh( double x);<br>
+    <td valign="top"> <font class="font"> double sinh( double x);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> sinh()用来计算参数x的双曲线正玄值，然后将结果返回。数学定义式为:(exp(x)-exp(-x))/2。<br>
+    <td valign="top"> <font class="font"> sinh()用来计算参数x的双曲线正玄值，然后将结果返回。数学定义式为:(exp(x)-exp(-x))/2。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回参数x的双曲线正玄值。<br>
+    <td valign="top"> <font class="font"> 返回参数x的双曲线正玄值。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
-	  main()<br>
-	  {<br>
-	  double answer = sinh (0.5);<br>
-	  printf("sinh(0.5) = %f\n",answer);<br>
-	  }<br>
+    <td valign="top"> <font class="font"> #include "math.h"
+	  main()
+	  {
+	  double answer = sinh (0.5);
+	  printf("sinh(0.5) = %f\n",answer);
+	  }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> sinh(0.5) = 0.521095<br>
+    <td valign="top"> <font class="font"> sinh(0.5) = 0.521095
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc86></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc86></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       sqrt（计算平方根值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> hypotq<br>
+    <td valign="top"> <font class="font"> hypotq
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double sqrt(double x);<br>
+    <td valign="top"> <font class="font"> double sqrt(double x);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> sqrt()用来计算参数x的平方根，然后将结果返回。参数x必须为正数。<br>
+    <td valign="top"> <font class="font"> sqrt()用来计算参数x的平方根，然后将结果返回。参数x必须为正数。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回参数x的平方根值。<br>
+    <td valign="top"> <font class="font"> 返回参数x的平方根值。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 错误代码 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 错误代码 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> EDOM 参数x为负数。<br>
+    <td valign="top"> <font class="font"> EDOM 参数x为负数。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> /* 计算200的平方根值*/<br>
-      #include&lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      double root;<br>
-      root = sqrt (200);<br>
-      printf("answer is %f\n",root);<br>
-      }<br>
+    <td valign="top"> <font class="font"> /* 计算200的平方根值*/
+      #include "math.h"
+      main()
+      {
+      double root;
+      root = sqrt (200);
+      printf("answer is %f\n",root);
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> answer is 14.142136<br>
+    <td valign="top"> <font class="font"> answer is 14.142136
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc87></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc87></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       tan（取正切函数值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> atan，atan2，cos，sin<br>
+    <td valign="top"> <font class="font"> atan，atan2，cos，sin
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include &lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include  "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double tan(double x);<br>
+    <td valign="top"> <font class="font"> double tan(double x);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> tan()用来计算参数x的正切值，然后将结果返回。<br>
+    <td valign="top"> <font class="font"> tan()用来计算参数x的正切值，然后将结果返回。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回参数x的正切值。<br>
+    <td valign="top"> <font class="font"> 返回参数x的正切值。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      double answer = tan(0.5);<br>
-      printf("tan (0.5) = %f\n",answer);<br>
-      }<br>
+    <td valign="top"> <font class="font"> #include "math.h"
+      main()
+      {
+      double answer = tan(0.5);
+      printf("tan (0.5) = %f\n",answer);
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> tan(0.5) = 0.546302<br>
+    <td valign="top"> <font class="font"> tan(0.5) = 0.546302
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
-        <font face='宋体' size='2'><a name=linuxc88></a></font> </div>
+    <td class="td">　 
+      <div class="div">
+        <font class="font"><a name=linuxc88></a></font> </div>
     </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> <br>
+    <td class="td"> 
+      <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> <br>
+    <td valign="top"> <font class="font"> 
       tanh（取双曲线正切函数值） </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 相关函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> cosh，sinh<br>
+    <td valign="top"> <font class="font"> cosh，sinh
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 表头文件 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 定义函数 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> double tanh(double x);<br>
+    <td valign="top"> <font class="font"> double tanh(double x);
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 函数说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> tanh()用来计算参数x的双曲线正切值，然后将结果返回。数学定义式为:sinh(x)/cosh(x)。<br>
+    <td valign="top"> <font class="font"> tanh()用来计算参数x的双曲线正切值，然后将结果返回。数学定义式为:sinh(x)/cosh(x)。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 返回值 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 返回值 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 返回参数x的双曲线正切值。<br>
+    <td valign="top"> <font class="font"> 返回参数x的双曲线正切值。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 附加说明 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 附加说明 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> 使用GCC编译时请加入-lm。<br>
+    <td valign="top"> <font class="font"> 使用GCC编译时请加入-lm。
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 范例 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> #include&lt;math.h&gt;<br>
-      main()<br>
-      {<br>
-      double answer = tanh(0.5);<br>
-      printf("tanh(0.5) = %f\n",answer);<br>
-      }<br>
+    <td valign="top"> <font class="font"> #include "math.h"
+      main()
+      {
+      double answer = tanh(0.5);
+      printf("tanh(0.5) = %f\n",answer);
+      }
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top"> 
-      <div align="right"><font face='宋体' size='2'> 执行 </font> </div>
+    <td class="td"> 
+      <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font face='宋体' size='2'> tanh(0.5) = 0.462117<br>
+    <td valign="top"> <font class="font"> tanh(0.5) = 0.462117
       </font> </td>
   </tr>
   <tr> 
-    <td width="80" valign="top">　 
-      <div align="right"><br>
+    <td class="td">　 
+      <div class="div">
       </div>
     </td>
   </tr>

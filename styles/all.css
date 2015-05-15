@@ -15,3 +15,12 @@
   font-family: "宋体";
   font-size: 16px;
 }
+
+.tt {
+  font-style: italic;
+  color: brown;
+}
+
+a {
+  text-decoration: none;
+}
