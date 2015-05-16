@@ -189,10 +189,12 @@
       </pre>
     </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc72></a></font> </div>
+        <font class="font"><a name=asin></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -200,22 +202,26 @@
       <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font class="font"> 
-      asin（取反正弦函数值） </font> </td>
+    <td valign="top"> <font class="font"> asin（取反正弦函数值） </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> acos , atan , atan2 , cos , sin 
-      , tan
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#acos">acos</a>,
+      <a href="06.html#atan">atan</a>,
+      <a href="06.html#atan2">atan2</a>,
+      <a href="06.html#cos">cos</a>,
+      <a href="06.html#sin">sin</a>,
+      <a href="06.html#tan">tan</a>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include  "math.h"
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
@@ -257,26 +263,37 @@
     <td class="td"> 
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include "math.h"
-      main()
-      {
-      double angle;
-      angle = asin (0.5);
-      printf("angle = %f\n",angle);
-      }
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          #include  "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              double angle;
+              angle = asin(0.5);
+              printf("angle = %f\n", angle);
+              return 0;
+          }
+      </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> angle = 0.523599
+    <td valign="top"> <font class="font">
+      <pre class="brush: cpp;">
+          angle = 0.523599
+        </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc73></a></font> </div>
+        <font class="font"><a name=atan></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -284,14 +301,19 @@
       <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font class="font"> 
-      atan（取反正切函数值） </font> </td>
+    <td valign="top"> <font class="font"> atan（取反正切函数值） </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> acos，asin，atan2，cos，sin，tan
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#acos">acos</a>,
+      <a href="06.html#asin">asin</a>,
+      <a href="06.html#atan2">atan2</a>,
+      <a href="06.html#cos">cos</a>,
+      <a href="06.html#sin">sin</a>,
+      <a href="06.html#tan">tan</a>
       </font> </td>
   </tr>
   <tr> 
@@ -333,26 +355,37 @@
     <td class="td"> 
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include "math.h"
-      main()
-      {
-      double angle;
-      angle =atan(1);
-      printf("angle = %f\n",angle);
-      }
+    <td valign="top"> <font class="font">
+      <pre class="brush: cpp;">
+          #include  "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              double angle;
+              angle = atan(0.5);
+              printf("angle = %f\n", angle);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> angle = 1.570796
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          angle = 0.463648
+        </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc74></a></font> </div>
+        <font class="font"><a name=atan2></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -360,14 +393,19 @@
       <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font class="font"> 
-      atan2（取得反正切函数值） </font> </td>
+    <td valign="top"> <font class="font"> atan2（取得反正切函数值） </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> acos，asin，atan，cos，sin，tan
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#acos">acos</a>,
+      <a href="06.html#asin">asin</a>,
+      <a href="06.html#atan">atan</a>,
+      <a href="06.html#cos">cos</a>,
+      <a href="06.html#sin">sin</a>,
+      <a href="06.html#tan">tan</a>
       </font> </td>
   </tr>
   <tr> 
@@ -381,7 +419,7 @@
     <td class="td"> 
       <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> double atan2(double y,double x);
+    <td valign="top"> <font class="font"> double atan2(double y, double x);
       </font> </td>
   </tr>
   <tr> 
@@ -409,26 +447,37 @@
     <td class="td"> 
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include "math.h"
-      main()
-      {
-      double angle;
-      angle = atan2(1,2);
-      printf("angle = %f\n", angle);
-      }
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          #include  "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              double angle;
+              angle = atan2(1, 2);
+              printf("angle = %f\n", angle);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> angle = 0.463648
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          angle = 0.463648
+        </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc75></a></font> </div>
+        <font class="font"><a name=ceil></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -436,14 +485,14 @@
       <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font class="font"> 
-      ceil（取不小于参数的最小整型数） </font> </td>
+    <td valign="top"> <font class="font"> ceil（取不小于参数的最小整型数） </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> fabs
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#fabs">fabs</a>
       </font> </td>
   </tr>
   <tr> 
@@ -457,7 +506,7 @@
     <td class="td"> 
       <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> double ceil (double x);
+    <td valign="top"> <font class="font"> double ceil(double x);
       </font> </td>
   </tr>
   <tr> 
@@ -485,29 +534,40 @@
     <td class="td"> 
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include "math.h"
-      main()
-      {
-      double value[ ]={4.8,1.12,-2.2,0};
-      int i;
-      for (i=0;value[i]!=0;i++)
-      printf("%f="%f\n",value[i],ceil(value[i]));
-      }
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          #include "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              const double value[] = {4.8, 1.12, -2.2, 0};
+              int i;
+              for (i = 0; value[i] != 0; i++)
+                  printf("%f = %f\n", value[i], ceil(value[i]));
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> 4.800000="5.000000
-      1.120000="2.000000
-      -2.200000="-2.000000
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          4.800000 = 5.000000
+          1.120000 = 2.000000
+          -2.200000 = -2.000000
+        </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc76></a></font> </div>
+        <font class="font"><a name=cos></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -515,14 +575,19 @@
       <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font class="font"> 
-      cos（取余玄函数值） </font> </td>
+    <td valign="top"> <font class="font"> cos（取余玄函数值） </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> acos，asin，atan，atan2，sin，tan
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#acos">acos</a>,
+      <a href="06.html#asin">asin</a>,
+      <a href="06.html#atan">atan</a>,
+      <a href="06.html#atan2">atan2</a>,
+      <a href="06.html#sin">sin</a>,
+      <a href="06.html#tan">tan</a>
       </font> </td>
   </tr>
   <tr> 
@@ -564,25 +629,36 @@
     <td class="td"> 
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include "math.h"
-      main()
-      {
-      double answer = cos(0.5);
-      printf("cos (0.5) = %f\n",answer);
-      }
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          #include "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              double answer = cos(0.5);
+              printf("cos (0.5) = %f\n", answer);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> cos(0.5) = 0.877583
+    <td valign="top"> <font class="font">
+      <pre class="brush: cpp;">
+          cos (0.5) = 0.877583
+        </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc77></a></font> </div>
+        <font class="font"><a name=cosh></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -590,14 +666,15 @@
       <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font class="font"> 
-      cosh（取双曲线余玄函数值） </font> </td>
+    <td valign="top"> <font class="font"> cosh（取双曲线余玄函数值） </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> sinh，tanh
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#sinh">sinh</a>,
+      <a href="06.html#tanh">tanh</a>
       </font> </td>
   </tr>
   <tr> 
@@ -639,25 +716,36 @@
     <td class="td"> 
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include "math.h"
-      main()
-      {
-      double answer = cosh(0.5);
-      printf("cosh(0.5) = %f\n",answer);
-      }
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          #include "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              double answer = cosh(0.5);
+              printf("cosh(0.5) = %f\n", answer);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> cosh(0.5) = 1.127626
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+        cosh(0.5) = 1.127626
+      </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc78></a></font> </div>
+        <font class="font"><a name=exp></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -665,14 +753,16 @@
       <div class="div"><font class="font"> 
         </font> </div>
     </td>
-    <td valign="top"> <font class="font"> 
-      exp（计算指数） </font> </td>
+    <td valign="top"> <font class="font"> exp（计算指数） </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> log，log10，pow
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#log">log</a>,
+      <a href="06.html#log10">log10</a>,
+      <a href="06.html#pow">pow</a>
       </font> </td>
   </tr>
   <tr> 
@@ -714,26 +804,37 @@
     <td class="td"> 
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include "math.h"
-      main()
-      {
-      double answer;
-      answer = exp (10);
-      printf("e^10 =%f\n", answer);
-      }
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          #include "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              double answer;
+              answer = exp (10);
+              printf("e^10 =%f\n", answer);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> e^10 = 22026.465795
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          e^10 =22026.465795
+        </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc79></a></font> </div>
+        <font class="font"><a name=frexp></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -748,7 +849,9 @@
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> ldexp，modf
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#ldexp">ldexp</a>,
+      <a href="06.html#modf">modf</a>
       </font> </td>
   </tr>
   <tr> 
@@ -762,15 +865,14 @@
     <td class="td"> 
       <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> double frexp( double x, int *exp);
+    <td valign="top"> <font class="font"> double frexp(double x, int *exp);
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> frexp()用来将参数x 的浮点型数切割成底数和指数。底数部分直接返回，指数部分则借参数exp 
-      指针返回，将返回值乘以2 的exp次方即为x的值。
+    <td valign="top"> <font class="font"> frexp()用来将参数x 的浮点型数切割成底数和指数。底数部分直接返回，指数部分则借参数exp指针返回，将返回值乘以2 的exp次方即为x的值。
       </font> </td>
   </tr>
   <tr> 
@@ -791,29 +893,40 @@
     <td class="td"> 
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include  "math.h"
-      main()
-      {
-      int exp;
-      double fraction;
-      fraction = frexp (1024,&exp);
-      printf("exp = %d\n",exp);
-      printf("fraction = %f\n", fraction);
-      }
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          #include "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              int exp;
+              double fraction;
+              fraction = frexp (1024, &exp);
+              printf("exp = %d\n", exp);
+              printf("fraction = %f\n", fraction);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> exp = 11
-      fraction = 0.500000 /* 0.5*(2^11)=1024*/
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          exp = 11
+          fraction = 0.500000
+        </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc80></a></font> </div>
+        <font class="font"><a name=ldexp></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -828,7 +941,8 @@
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> frexp
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#frexp">frexp</a>
       </font> </td>
   </tr>
   <tr> 
@@ -871,27 +985,37 @@
       <div class="div"><font class="font"> 范例: </font> </div>
     </td>
     <td valign="top"> <font class="font"> /* 计算3*(2^2)＝12 */
-      #include "math.h"
-      main()
-      {
-      int exp;
-      double x,answer;
-      answer = ldexp(3,2);
-      printf("3*2^(2) = %f\n",answer);
-      }
+      <pre class="brush: cpp;">
+          #include "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              int exp;
+              double x, answer;
+              answer = ldexp(3, 2);
+              printf("3*2^(2) = %f\n", answer);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> 3*2^(2) = 12.000000
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          3*2^(2) = 12.000000
+        </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc81></a></font> </div>
+        <font class="font"><a name=log></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -906,28 +1030,31 @@
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> exp，log10，pow
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#exp">exp</a>,
+      <a href="06.html#log10">log10</a>,
+      <a href="06.html#pow">pow</a>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include  "math.h"
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> double log (double x);
+    <td valign="top"> <font class="font"> double log(double x);
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 函数说明 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> log（）用来计算以e为底的x 对数值，然后将结果返回。
+    <td valign="top"> <font class="font"> log()用来计算以e为底的x 对数值，然后将结果返回。
       </font> </td>
   </tr>
   <tr> 
@@ -955,26 +1082,37 @@
     <td class="td"> 
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include "math.h"
-      main()
-      {
-      double answer;
-      answer = log (100);
-      printf("log(100) = %f\n",answer);
-      }
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          #include "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              double answer;
+              answer = log (100);
+              printf("log(100) = %f\n", answer);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> log(100) = 4.605170
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          log(100) = 4.605170
+        </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc82></a></font> </div>
+        <font class="font"><a name=log10></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -989,7 +1127,10 @@
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> exp，log，pow
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#exp">exp</a>,
+      <a href="06.html#log">log</a>,
+      <a href="06.html#pow">pow</a>
       </font> </td>
   </tr>
   <tr> 
@@ -1038,26 +1179,37 @@
     <td class="td"> 
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include "math.h"
-      main()
-      {
-      double answer;
-      answer = log10(100);
-      printf("log10(100) = %f\n",answer);
-      }
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          #include "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              double answer;
+              answer = log10(100);
+              printf("log10(100) = %f\n", answer);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> log10(100) = 2.000000
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          log10(100) = 2.000000
+        </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc83></a></font> </div>
+        <font class="font"><a name=pow></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -1072,7 +1224,10 @@
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> exp，log，log10
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#exp">exp</a>,
+      <a href="06.html#log">log</a>,
+      <a href="06.html#log10">log10</a>
       </font> </td>
   </tr>
   <tr> 
@@ -1086,7 +1241,7 @@
     <td class="td"> 
       <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> double pow(double x,double y);
+    <td valign="top"> <font class="font"> double pow(double x, double y);
       </font> </td>
   </tr>
   <tr> 
@@ -1121,26 +1276,37 @@
     <td class="td"> 
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include  "math.h"
-      main()
-      {
-      double answer;
-      answer =pow(2,10);
-      printf("2^10 = %f\n", answer);
-      }
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          #include "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              double answer;
+              answer = pow(2, 10);
+              printf("2^10 = %f\n", answer);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> 2^10 = 1024.000000
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          2^10 = 1024.000000
+        </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc84></a></font> </div>
+        <font class="font"><a name=sin></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -1155,7 +1321,13 @@
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> acos，asin，atan，atan2，cos，tan
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#acos">acos</a>,
+      <a href="06.html#asin">asin</a>,
+      <a href="06.html#atan">atan</a>,
+      <a href="06.html#atan2">atan2</a>,
+      <a href="06.html#cos">cos</a>,
+      <a href="06.html#tan">tan</a>
       </font> </td>
   </tr>
   <tr> 
@@ -1197,25 +1369,36 @@
     <td class="td"> 
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include "math.h"
-      main()
-      {
-      double answer = sin (0.5);
-      printf("sin(0.5) = %f\n",answer);
-      }
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          #include "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              double answer = sin (0.5);
+              printf("sin(0.5) = %f\n", answer);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> sin(0.5) = 0.479426
+    <td valign="top"> <font class="font">
+      <pre class="brush: cpp;">
+          sin(0.5) = 0.479426
+        </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc85></a></font> </div>
+        <font class="font"><a name=sinh></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -1230,7 +1413,9 @@
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> cosh，tanh
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#cosh">cosh</a>,
+      <a href="06.html#tanh">tanh</a>
       </font> </td>
   </tr>
   <tr> 
@@ -1244,7 +1429,7 @@
     <td class="td"> 
       <div class="div"><font class="font"> 定义函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> double sinh( double x);
+    <td valign="top"> <font class="font"> double sinh(double x);
       </font> </td>
   </tr>
   <tr> 
@@ -1272,25 +1457,36 @@
     <td class="td"> 
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include "math.h"
-	  main()
-	  {
-	  double answer = sinh (0.5);
-	  printf("sinh(0.5) = %f\n",answer);
-	  }
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          #include "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              double answer = sinh (0.5);
+              printf("sinh(0.5) = %f\n", answer);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> sinh(0.5) = 0.521095
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          sinh(0.5) = 0.521095
+        </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc86></a></font> </div>
+        <font class="font"><a name=sqrt></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -1305,7 +1501,8 @@
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> hypotq
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#hypotq">hypotq</a>
       </font> </td>
   </tr>
   <tr> 
@@ -1355,26 +1552,36 @@
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
     <td valign="top"> <font class="font"> /* 计算200的平方根值*/
-      #include "math.h"
-      main()
-      {
-      double root;
-      root = sqrt (200);
-      printf("answer is %f\n",root);
-      }
+      <pre class="brush: cpp;">
+          #include "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              double root;
+              root = sqrt (200);
+              printf("answer is %f\n", root);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> answer is 14.142136
+    <td valign="top"> <font class="font">
+      <pre class="brush: cpp;">
+          answer is 14.142136
+        </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc87></a></font> </div>
+        <font class="font"><a name=tan></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -1389,14 +1596,18 @@
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> atan，atan2，cos，sin
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#atan">atan</a>,
+      <a href="06.html#atan2">atan2</a>,
+      <a href="06.html#cos">cos</a>,
+      <a href="06.html#sin">sin</a>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 表头文件 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include  "math.h"
+    <td valign="top"> <font class="font"> #include "math.h"
       </font> </td>
   </tr>
   <tr> 
@@ -1431,25 +1642,36 @@
     <td class="td"> 
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include "math.h"
-      main()
-      {
-      double answer = tan(0.5);
-      printf("tan (0.5) = %f\n",answer);
-      }
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          #include "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              double answer = tan(0.5);
+              printf("tan (0.5) = %f\n", answer);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> tan(0.5) = 0.546302
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          tan (0.5) = 0.546302
+        </pre>
       </font> </td>
   </tr>
+  <tr><td><br/><br/></td></tr>
+  
   <tr> 
     <td class="td">　 
       <div class="div">
-        <font class="font"><a name=linuxc88></a></font> </div>
+        <font class="font"><a name=tanh></a></font> </div>
     </td>
   </tr>
   <tr> 
@@ -1464,7 +1686,9 @@
     <td class="td"> 
       <div class="div"><font class="font"> 相关函数 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> cosh，sinh
+    <td valign="top"> <font class="font"> 
+      <a href="06.html#cosh">cosh</a>,
+      <a href="06.html#sinh">sinh</a>
       </font> </td>
   </tr>
   <tr> 
@@ -1506,19 +1730,28 @@
     <td class="td"> 
       <div class="div"><font class="font"> 范例 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> #include "math.h"
-      main()
-      {
-      double answer = tanh(0.5);
-      printf("tanh(0.5) = %f\n",answer);
-      }
+    <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+          #include "math.h"
+          #include "stdio.h"
+
+          int main(int argc, char const *argv[])
+          {
+              double answer = tanh(0.5);
+              printf("tanh(0.5) = %f\n", answer);
+              return 0;
+          }
+        </pre>
       </font> </td>
   </tr>
   <tr> 
     <td class="td"> 
       <div class="div"><font class="font"> 执行 </font> </div>
     </td>
-    <td valign="top"> <font class="font"> tanh(0.5) = 0.462117
+    <td valign="top"> <font class="font">
+      <pre class="brush: cpp;">
+          tanh(0.5) = 0.462117
+        </pre>
       </font> </td>
   </tr>
   <tr> 
