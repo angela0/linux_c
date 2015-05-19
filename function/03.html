@@ -25,7 +25,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> calloc（配置内存空间） </font> </td>
+      <td valign="top"> <font class="font tt"> calloc(配置内存空间) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -102,7 +102,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> free（释放原先配置的内存） </font> </td>
+      <td valign="top"> <font class="font tt"> free(释放原先配置的内存) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -150,7 +150,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> getpagesize（取得内存分页大小） </font> </td>
+      <td valign="top"> <font class="font tt"> getpagesize(取得内存分页大小) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -178,7 +178,7 @@
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 返回一分页的大小，单位为字节（byte）。此为系统的分页大小，不一定会和硬件分页大小相同。
+      <td valign="top"> <font class="font"> 返回一分页的大小，单位为字节(byte)。此为系统的分页大小，不一定会和硬件分页大小相同。
       </font> </td>
     </tr>
     <tr>
@@ -217,7 +217,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> malloc（配置内存空间） </font> </td>
+      <td valign="top"> <font class="font tt"> malloc(配置内存空间) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -291,7 +291,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> mmap（建立内存映射） </font> </td>
+      <td valign="top"> <font class="font tt"> mmap(建立内存映射) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -342,10 +342,10 @@
       <td valign="top"> <font class="font"> flags会影响映射区域的各种特性
       MAP_FIXED 如果参数start所指的地址无法成功建立映射时，则放弃映射，不对地址做修正。通常不鼓励用此旗标。
       MAP_SHARED对映射区域的写入数据会复制回文件内，而且允许其他映射该文件的进程共享。
-      MAP_PRIVATE 对映射区域的写入操作会产生一个映射文件的复制，即私人的"写入时复制"（copy on write）对此区域作的任何修改都不会写回原来的文件内容。
+      MAP_PRIVATE 对映射区域的写入操作会产生一个映射文件的复制，即私人的"写入时复制"(copy on write)对此区域作的任何修改都不会写回原来的文件内容。
       MAP_ANONYMOUS建立匿名映射。此时会忽略参数fd，不涉及文件，而且映射区域无法和其他进程共享。
       MAP_DENYWRITE只允许对映射区域的写入操作，其他对文件直接写入的操作将会被拒绝。
-      MAP_LOCKED 将映射区域锁定住，这表示该区域不会被置换（swap）。
+      MAP_LOCKED 将映射区域锁定住，这表示该区域不会被置换(swap)。
       在调用mmap()时必须要指定MAP_SHARED 或MAP_PRIVATE。参数fd为open()返回的文件描述词，代表欲映射到内存的文件。参数offset为文件映射的偏移量，通常设置为0，代表从文件最前方开始对应，offset必须是分页大小的整数倍。
       </font> </td>
     </tr>
@@ -461,7 +461,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> munmap（解除内存映射） </font> </td>
+      <td valign="top"> <font class="font tt"> munmap(解除内存映射) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -512,7 +512,7 @@
       <td class="td">
         <div class="div"><font class="font"> 范例 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 参考mmap（）
+      <td valign="top"> <font class="font"> 参考mmap()
       </font> </td>
     </tr>
     <tr>

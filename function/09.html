@@ -25,8 +25,8 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td> <font class="font"> 
-      close（关闭文件） </font> </td>
+      <td> <font class="font tt"> 
+      close(关闭文件) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -102,8 +102,8 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td> <font class="font"> 
-      creat（建立文件） </font> </td>
+      <td> <font class="font tt"> 
+      creat(建立文件) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -200,8 +200,8 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td> <font class="font"> 
-      dup（复制文件描述词） </font> </td>
+      <td> <font class="font tt"> 
+      dup(复制文件描述词) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -255,8 +255,8 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td> <font class="font"> 
-      dup2（复制文件描述词） </font> </td>
+      <td> <font class="font tt"> 
+      dup2(复制文件描述词) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -324,8 +324,8 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td> <font class="font"> 
-      fcntl（文件描述词操作） </font> </td>
+      <td> <font class="font tt"> 
+      fcntl(文件描述词操作) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -418,8 +418,8 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td> <font class="font"> 
-      flock（锁定文件或解除锁定） </font> </td>
+      <td> <font class="font tt"> 
+      flock(锁定文件或解除锁定) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -485,8 +485,8 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td> <font class="font"> 
-      fsync（将缓冲区数据写回磁盘） </font> </td>
+      <td> <font class="font tt"> 
+      fsync(将缓冲区数据写回磁盘) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -537,8 +537,8 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td> <font class="font"> 
-      lseek（移动文件的读写位置） </font> </td>
+      <td> <font class="font tt"> 
+      lseek(移动文件的读写位置) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -584,9 +584,9 @@
       SEEK_END 将读写位置指向文件尾后再增加offset个位移量。
       当whence 值为SEEK_CUR 或SEEK_END时，参数offet允许负值的出现。
       下列是教特别的使用方式:
-      1) 欲将读写位置移到文件开头时:lseek（int fildes,0,SEEK_SET）；
-      2) 欲将读写位置移到文件尾时:lseek（int fildes，0,SEEK_END）；
-      3) 想要取得目前文件位置时:lseek（int fildes，0,SEEK_CUR）；
+      1) 欲将读写位置移到文件开头时:lseek(int fildes,0,SEEK_SET)；
+      2) 欲将读写位置移到文件尾时:lseek(int fildes，0,SEEK_END)；
+      3) 想要取得目前文件位置时:lseek(int fildes，0,SEEK_CUR)；
       </pre>
       </font> </td>
     </tr>
@@ -624,8 +624,8 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td> <font class="font"> 
-      mkstemp（建立唯一的临时文件） </font> </td>
+      <td> <font class="font tt"> 
+      mkstemp(建立唯一的临时文件) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -721,8 +721,8 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td> <font class="font"> 
-      open（打开文件） </font> </td>
+      <td> <font class="font tt"> 
+      open(打开文件) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -781,7 +781,7 @@
       O_NOFOLLOW 如果参数pathname 所指的文件为一符号连接，则会令打开文件失败。
       O_DIRECTORY 如果参数pathname 所指的文件并非为一目录，则会令打开文件失败。
       </pre>
-      此为Linux2.2以后特有的旗标，以避免一些系统安全问题。参数mode 则有下列数种组合，只有在建立新文件时才会生效，此外真正建文件时的权限会受到umask值所影响，因此该文件权限应该为（mode-umaks）。
+      此为Linux2.2以后特有的旗标，以避免一些系统安全问题。参数mode 则有下列数种组合，只有在建立新文件时才会生效，此外真正建文件时的权限会受到umask值所影响，因此该文件权限应该为(mode-umaks)。
         <pre>
       S_IRWXU00700 权限，代表该文件所有者具有可读、可写及可执行的权限。
       S_IRUSR 或S_IREAD，00400权限，代表该文件所有者具有可读取的权限。
@@ -884,8 +884,8 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td> <font class="font"> 
-      read（由已打开的文件读取数据） </font> </td>
+      <td> <font class="font tt"> 
+      read(由已打开的文件读取数据) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -936,7 +936,7 @@
       <td> <font class="font"> 
         <pre>
         EINTR 此调用被信号所中断。
-        EAGAIN 当使用不可阻断I/O 时（O_NONBLOCK），若无数据可读取则返回此值。
+        EAGAIN 当使用不可阻断I/O 时(O_NONBLOCK)，若无数据可读取则返回此值。
         EBADF 参数fd 非有效的文件描述词，或该文件已关闭。
       </pre>
       </font> </td>
@@ -945,7 +945,7 @@
       <td class="td">
         <div class="div"><font class="font"> 范例 </font> </div>
       </td>
-      <td> <font class="font"> 参考open（）。
+      <td> <font class="font"> 参考open()。
       </font> </td>
     </tr>
     <tr><td><br/><br/></td></tr>
@@ -961,8 +961,8 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td> <font class="font"> 
-      sync（将缓冲区数据写回磁盘） </font> </td>
+      <td> <font class="font tt"> 
+      sync(将缓冲区数据写回磁盘) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -1013,8 +1013,8 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td> <font class="font"> 
-      write（将数据写入已打开的文件内） </font> </td>
+      <td> <font class="font tt"> 
+      write(将数据写入已打开的文件内) </font> </td>
     </tr>
     <tr>
       <td class="td">
@@ -1065,7 +1065,7 @@
       <td> <font class="font"> 
         <pre>
         EINTR 此调用被信号所中断。
-      EAGAIN 当使用不可阻断I/O 时（O_NONBLOCK），若无数据可读取则返回此值。
+      EAGAIN 当使用不可阻断I/O 时(O_NONBLOCK)，若无数据可读取则返回此值。
       EADF 参数fd非有效的文件描述词，或该文件已关闭。
       </pre>
       </font> </td>

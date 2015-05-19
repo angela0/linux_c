@@ -25,7 +25,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       accept(接受socket连线) </font> </td>
     </tr>
     <tr>
@@ -33,10 +33,10 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#socket">socket</a>,
-        <a href="12.html#bind">bind</a>,
-        <a href="12.html#listen">listen</a>,
-        <a href="12.html#connect">connect</a>
+        <a href="14.html#socket">socket</a>,
+        <a href="14.html#bind">bind</a>,
+        <a href="14.html#listen">listen</a>,
+        <a href="14.html#connect">connect</a>
       </font> </td>
     </tr>
     <tr>
@@ -52,8 +52,8 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int accept(int s,struct sockaddr 
-      * addr,int * addrlen);
+      <td valign="top"> <font class="font"> 
+        int accept(int s, struct sockaddr * addr, int *addrlen);
       </font> </td>
     </tr>
     <tr>
@@ -103,7 +103,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       bind(对socket定位) </font> </td>
     </tr>
     <tr>
@@ -111,10 +111,10 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#socket">socket</a>,
-        <a href="12.html#accept">accept</a>,
-        <a href="12.html#connect">connect</a>,
-        <a href="12.html#listen">listen</a>
+        <a href="14.html#socket">socket</a>,
+        <a href="14.html#accept">accept</a>,
+        <a href="14.html#connect">connect</a>,
+        <a href="14.html#listen">listen</a>
       </font> </td>
     </tr>
     <tr>
@@ -130,39 +130,42 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int bind(int sockfd,struct sockaddr 
-      * my_addr,int addrlen);
+      <td valign="top"> <font class="font"> 
+        int bind(int sockfd, struct sockaddr *my_addr, int addrlen);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> bind()用来设置给参数sockfd的socket一个名称。此名称由参数my_addr指向一sockaddr结构，对于不同的socket 
-      domain定义了一个通用的数据结构
-      struct sockaddr
-      {
-      unsigned short int sa_family;
-      char sa_data[14];
-      };
-      sa_family 为调用socket()时的domain参数，即AF_xxxx值。
-      sa_data 最多使用14个字符长度。
-      此sockaddr结构会因使用不同的socket domain而有不同结构定义，例如使用AF_INET domain，其socketaddr结构定义便为
+      <td valign="top"> <font class="font"> bind()用来设置给参数sockfd的socket一个名称。此名称由参数my_addr指向一sockaddr结构，对于不同的socket, domain定义了一个通用的数据结构:
+      <pre>
+        struct sockaddr
+        {
+            unsigned short int sa_family;
+            char sa_data[14];
+        };
+        sa_family 为调用socket()时的domain参数，即AF_xxxx值。
+        sa_data 最多使用14个字符长度。
+      </pre>
+      此sockaddr结构会因使用不同的socket domain而有不同结构定义，例如使用AF_INET domain，其socketaddr结构定义便为:
+        <pre>
       struct socketaddr_in
       {
-      unsigned short int sin_family;
-      uint16_t sin_port;
-      struct in_addr sin_addr;
-      unsigned char sin_zero[8];
+          unsigned short int sin_family;
+          uint16_t sin_port;
+          struct in_addr sin_addr;
+          unsigned char sin_zero[8];
       };
       struct in_addr
       {
-      uint32_t s_addr;
+          uint32_t s_addr;
       };
       sin_family 即为sa_family
       sin_port 为使用的port编号
       sin_addr.s_addr 为IP 地址
       sin_zero 未使用。
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -183,9 +186,12 @@
       <td class="td">
         <div class="div"><font class="font"> 错误代码 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> EBADF 参数sockfd 非合法socket处理代码。
+      <td valign="top"> <font class="font"> 
+        <pre>
+      EBADF 参数sockfd 非合法socket处理代码。
       EACCESS 权限不足
       ENOTSOCK 参数sockfd为一文件描述词，非socket。
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -208,7 +214,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       connect(建立socket连线) </font> </td>
     </tr>
     <tr>
@@ -216,9 +222,9 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#socket">socket</a>,
-        <a href="12.html#bind">bind</a>,
-        <a href="12.html#listen">listen</a>
+        <a href="14.html#socket">socket</a>,
+        <a href="14.html#bind">bind</a>,
+        <a href="14.html#listen">listen</a>
       </font> </td>
     </tr>
     <tr>
@@ -234,16 +240,15 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int connect (int sockfd,struct 
-      sockaddr * serv_addr,int addrlen);
+      <td valign="top"> <font class="font"> 
+        int connect (int sockfd, struct sockaddr *serv_addr, int addrlen);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> connect()用来将参数sockfd 的socket 连至参数serv_addr 
-      指定的网络地址。结构sockaddr请参考bind()。参数addrlen为sockaddr的结构长度。
+      <td valign="top"> <font class="font"> connect()用来将参数sockfd 的socket 连至参数serv_addr指定的网络地址。结构sockaddr请参考bind()。参数addrlen为sockaddr的结构长度。
       </font> </td>
     </tr>
     <tr>
@@ -257,7 +262,9 @@
       <td class="td">
         <div class="div"><font class="font"> 错误代码 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> EBADF 参数sockfd 非合法socket处理代码
+      <td valign="top"> <font class="font"> 
+        <pre>
+      EBADF 参数sockfd 非合法socket处理代码
       EFAULT 参数serv_addr指针指向无法存取的内存空间
       ENOTSOCK 参数sockfd为一文件描述词，非socket。
       EISCONN 参数sockfd的socket已是连线状态
@@ -266,68 +273,82 @@
       ENETUNREACH 无法传送数据包至指定的主机。
       EAFNOSUPPORT sockaddr结构的sa_family不正确。
       EALREADY socket为不可阻断且先前的连线操作还未完成。
+      </pre>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 范例 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> /* 利用socket的TCP client
-      此程序会连线TCP server，并将键盘输入的字符串传送给server。
-      TCP server范例请参考listen()。
-      */
-      #include "sys/stat.h"
-      #include "fcntl.h"
-      #include "unistd.h"
-      #include "sys/types.h"
-      #include "sys/socket.h"
-      #include "netinet/in.h"
-      #include "arpa/inet.h"
-      #define PORT 1234
-      #define SERVER_IP “127.0.0.1”
-      main()
-      {
-      int s;
-      struct sockaddr_in addr;
-      char buffer[256];
-      if((s = socket(AF_INET,SOCK_STREAM,0)) "0){
-      perror(“socket”);
-      exit(1);
-      }
-      /* 填写sockaddr_in结构*/
-      bzero(&addr,sizeof(addr));
-      addr.sin_family = AF_INET;
-      addr.sin_port=htons(PORT);
-      addr.sin_addr.s_addr = inet_addr(SERVER_IP);
-      /* 尝试连线*/
-      if(connect(s,&addr,sizeof(addr)) "0){
-      perror(“connect”);
-      exit(1);
-      }
-      /* 接收由server端传来的信息*/
-      recv(s,buffer,sizeof(buffer),0);
-      printf(“%s\n”,buffer);
-      while(1){
-      bzero(buffer,sizeof(buffer));
-      /* 从标准输入设备取得字符串*/
-      read(STDIN_FILENO,buffer,sizeof(buffer));
-      /* 将字符串传给server端*/
-      if(send(s,buffer,sizeof(buffer),0) "0){
-      perror(“send”);
-      exit(1);
-      }
-      }
-      }
+      <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+        /* 利用socket的TCP client此程序会连线TCP server，
+           并将键盘输入的字符串传送给server。TCP server范例请参考listen()。*/
+        #include "sys/stat.h"
+        #include "fcntl.h"
+        #include "unistd.h"
+        #include "sys/types.h"
+        #include "sys/socket.h"
+        #include "netinet/in.h"
+        #include "arpa/inet.h"
+        #include "stdio.h"
+        #include "string.h"
+        #include "stdlib.h"
+        #define PORT 1234
+        #define SERVER_IP "127.0.0.1"
+
+        int main(int argc, char const *argv[])
+        {
+            int s;
+            struct sockaddr_in addr;
+            char buffer[256];
+            if ((s = socket(AF_INET, SOCK_STREAM, 0)) < 0) 
+            {
+                perror("socket");
+                exit(1);
+            }
+            /* 填写sockaddr_in结构*/
+            bzero(&addr, sizeof(addr));
+            addr.sin_family = AF_INET;
+            addr.sin_port = htons(PORT);
+            addr.sin_addr.s_addr = inet_addr(SERVER_IP);
+            /* 尝试连线*/
+            if (connect(s, &addr, sizeof(addr)) < 0) 
+            {
+                perror("connect");
+                exit(1);
+            }
+            /* 接收由server端传来的信息*/
+            recv(s, buffer, sizeof(buffer), 0);
+            printf("%s\n", buffer);
+            while(1) 
+            {
+                bzero(buffer, sizeof(buffer));
+                /* 从标准输入设备取得字符串*/
+                read(STDIN_FILENO, buffer, sizeof(buffer));
+                /* 将字符串传给server端*/
+                if (send(s, buffer, sizeof(buffer), 0) < 0) 
+                {
+                    perror("send");
+                    exit(1);
+                }
+            }
+            return 0;
+        }
+      </pre>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 执行 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> $ ./connect
+      <td valign="top"> <font class="font">
+      <pre class="brush: cpp;">
       Welcome to server!
       hi I am client! /*键盘输入*/
       /* "Ctrl+C"中断程序*/
+      </pre>
+      
       </font> </td>
     </tr>
     <tr><td><br/><br/></td></tr>
@@ -343,7 +364,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       endprotoent(结束网络协议数据的读取) </font> </td>
     </tr>
     <tr>
@@ -351,10 +372,10 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#getprotoent">getprotoent</a>,
-        <a href="12.html#getprotobyname">getprotobyname</a>,
-        <a href="12.html#getprotobynumber">getprotobynumber</a>,
-        <a href="12.html#setprotoent">setprotoent</a>
+        <a href="14.html#getprotoent">getprotoent</a>,
+        <a href="14.html#getprotobyname">getprotobyname</a>,
+        <a href="14.html#getprotobynumber">getprotobynumber</a>,
+        <a href="14.html#setprotoent">setprotoent</a>
       </font> </td>
     </tr>
     <tr>
@@ -405,7 +426,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       endservent(结束网络服务数据的读取) </font> </td>
     </tr>
     <tr>
@@ -413,10 +434,10 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#getservent">getservent</a>,
-        <a href="12.html#getservbyname">getservbyname</a>,
-        <a href="12.html#getservbyport">getservbyport</a>,
-        <a href="12.html#setservent">setservent</a>
+        <a href="14.html#getservent">getservent</a>,
+        <a href="14.html#getservbyname">getservbyname</a>,
+        <a href="14.html#getservbyport">getservbyport</a>,
+        <a href="14.html#setservent">setservent</a>
       </font> </td>
     </tr>
     <tr>
@@ -467,7 +488,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       getsockopt(取得socket状态) </font> </td>
     </tr>
     <tr>
@@ -475,7 +496,7 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#setsockopt">setsockopt</a>
+        <a href="14.html#setsockopt">setsockopt</a>
         
       </font> </td>
     </tr>
@@ -483,7 +504,7 @@
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include "sys/types.h"
+      <td valign="top"> <font class="font"> #include "sys/types.h" <br/>
       #include "sys/socket.h"
       </font> </td>
     </tr>
@@ -491,8 +512,8 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int getsockopt(int s,int level,int 
-      optname,void* optval,socklen_t* optlen);
+      <td valign="top"> <font class="font"> 
+        int getsockopt(int s, int level, int optname, void *optval, socklen_t *optlen);
       </font> </td>
     </tr>
     <tr>
@@ -513,32 +534,50 @@
       <td class="td">
         <div class="div"><font class="font"> 错误代码 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> EBADF 参数s 并非合法的socket处理代码
+      <td valign="top"> <font class="font"> 
+        <pre>
+      EBADF 参数s 并非合法的socket处理代码
       ENOTSOCK 参数s为一文件描述词，非socket
       ENOPROTOOPT 参数optname指定的选项不正确
       EFAULT 参数optval指针指向无法存取的内存空间
+      </pre>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 范例 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include "sys/types.h"
-      #include "sys/socket.h"
-      main()
-      {
-      int s,optval,optlen = sizeof(int);
-      if((s = socket(AF_INET,SOCK_STREAM,0)) "0) perror(“socket”);
-      getsockopt(s,SOL_SOCKET,SO_TYPE,&optval,&optlen);
-      printf(“optval = %d\n”,optval);
-      close(s);}
+      <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+        #include "sys/types.h"
+        #include "sys/socket.h"
+        #include "stdio.h"
+        #include "stdlib.h"
+
+        int main(int argc, char const *argv[])
+        {
+            int s, optval, optlen = sizeof(int);
+            if ((s = socket(AF_INET, SOCK_STREAM, 0)) < 0) 
+            {
+                perror("socket");
+                exit(-1);
+            }
+            getsockopt(s, SOL_SOCKET, SO_TYPE, &optval, &optlen);
+            printf("optval = %d\n", optval);
+            close(s);
+            return 0;
+        }
+      </pre>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 执行 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> optval = 1 /*SOCK_STREAM的定义正是此值*/
+      <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+        optval = 1 /*SOCK_STREAM的定义正是此值*/
+      </pre>
       </font> </td>
     </tr>
     <tr><td><br/><br/></td></tr>
@@ -554,7 +593,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       htonl(将32位主机字符顺序转换成网络字符顺序) </font> </td>
     </tr>
     <tr>
@@ -562,9 +601,9 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#htons">htons</a>,
-        <a href="12.html#ntohl">ntohl</a>,
-        <a href="12.html#ntohs">ntohs</a>
+        <a href="14.html#htons">htons</a>,
+        <a href="14.html#ntohl">ntohl</a>,
+        <a href="14.html#ntohs">ntohs</a>
       </font> </td>
     </tr>
     <tr>
@@ -578,8 +617,8 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> unsigned long int htonl(unsigned 
-      long int hostlong);
+      <td valign="top"> <font class="font"> 
+        unsigned long int htonl(unsigned long int hostlong);
       </font> </td>
     </tr>
     <tr>
@@ -616,7 +655,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       htons(将16位主机字符顺序转换成网络字符顺序) </font> </td>
     </tr>
     <tr>
@@ -624,9 +663,9 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#htonl">htonl</a>,
-        <a href="12.html#ntohl">ntohl</a>,
-        <a href="12.html#ntohs">ntohs</a>
+        <a href="14.html#htonl">htonl</a>,
+        <a href="14.html#ntohl">ntohl</a>,
+        <a href="14.html#ntohs">ntohs</a>
       </font> </td>
     </tr>
     <tr>
@@ -640,8 +679,8 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> unsigned short int htons(unsigned 
-      short int hostshort);
+      <td valign="top"> <font class="font"> 
+        unsigned short int htons(unsigned short int hostshort);
       </font> </td>
     </tr>
     <tr>
@@ -678,7 +717,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       inet_addr(将网络地址转成二进制的数字) </font> </td>
     </tr>
     <tr>
@@ -686,8 +725,8 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#inet_aton">inet_aton</a>,
-        <a href="12.html#inet_ntoa">inet_ntoa</a>
+        <a href="14.html#inet_aton">inet_aton</a>,
+        <a href="14.html#inet_ntoa">inet_ntoa</a>
       </font> </td>
     </tr>
     <tr>
@@ -703,15 +742,15 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> unsigned long int inet_addr(const 
-      char *cp);
+      <td valign="top"> <font class="font"> 
+        unsigned long int inet_addr(const char *cp);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> inet_addr()用来将参数cp所指的网络地址字符串转换成网络所使用的二进制数字。网络地址字符串是以数字和点组成的字符串，例如:“163.13.132.68”。
+      <td valign="top"> <font class="font"> inet_addr()用来将参数cp所指的网络地址字符串转换成网络所使用的二进制数字。网络地址字符串是以数字和点组成的字符串，例如:"163.13.132.68"。
       </font> </td>
     </tr>
     <tr>
@@ -734,7 +773,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       inet_aton(将网络地址转成网络二进制的数字) </font> </td>
     </tr>
     <tr>
@@ -742,8 +781,8 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#inet_addr">inet_addr</a>,
-        <a href="12.html#inet_ntoa">inet_ntoa</a>
+        <a href="14.html#inet_addr">inet_addr</a>,
+        <a href="14.html#inet_ntoa">inet_ntoa</a>
       </font> </td>
     </tr>
     <tr>
@@ -759,20 +798,21 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int inet_aton(const char * cp,struct 
-      in_addr *inp);
+      <td valign="top"> <font class="font"> 
+        int inet_aton(const char *cp, struct in_addr *inp);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> inet_aton()用来将参数cp所指的网络地址字符串转换成网络使用的二进制的数字，然后存于参数inp所指的in_addr结构中。
-      结构in_addr定义如下
-      struct in_addr
-      {
-      unsigned long int s_addr;
-      };
+      <td valign="top"> <font class="font"> inet_aton()用来将参数cp所指的网络地址字符串转换成网络使用的二进制的数字，然后存于参数inp所指的in_addr结构中。结构in_addr定义如下:
+      <pre>
+        struct in_addr
+        {
+            unsigned long int s_addr;
+        };
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -795,7 +835,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       inet_ntoa(将网络二进制的数字转换成网络地址) </font> </td>
     </tr>
     <tr>
@@ -803,8 +843,8 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#inet_addr">inet_addr</a>,
-        <a href="12.html#inet_aton">inet_aton</a>
+        <a href="14.html#inet_addr">inet_addr</a>,
+        <a href="14.html#inet_aton">inet_aton</a>
       </font> </td>
     </tr>
     <tr>
@@ -820,8 +860,8 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> char * inet_ntoa(struct in_addr 
-      in);
+      <td valign="top"> <font class="font"> 
+        char *inet_ntoa(struct in_addr in);
       </font> </td>
     </tr>
     <tr>
@@ -851,7 +891,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       listen(监听) </font> </td>
     </tr>
     <tr>
@@ -859,10 +899,10 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#socket">socket</a>,
-        <a href="12.html#bind">bind</a>,
-        <a href="12.html#accept">accept</a>,
-        <a href="12.html#connect">connect</a>
+        <a href="14.html#socket">socket</a>,
+        <a href="14.html#bind">bind</a>,
+        <a href="14.html#accept">accept</a>,
+        <a href="14.html#connect">connect</a>
       </font> </td>
     </tr>
     <tr>
@@ -876,7 +916,7 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int listen(int s,int backlog);
+      <td valign="top"> <font class="font"> int listen(int s, int backlog);
       </font> </td>
     </tr>
     <tr>
@@ -897,17 +937,19 @@
       <td class="td">
         <div class="div"><font class="font"> 附加说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> listen()只适用SOCK_STREAM或SOCK_SEQPACKET的socket类型。如果socket为AF_INET则参数backlog 
-      最大值可设至128。
+      <td valign="top"> <font class="font"> listen()只适用SOCK_STREAM或SOCK_SEQPACKET的socket类型。如果socket为AF_INET则参数backlog最大值可设至128。
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 错误代码 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> EBADF 参数sockfd非合法socket处理代码
+      <td valign="top"> <font class="font"> 
+        <pre>
+      EBADF 参数sockfd非合法socket处理代码
       EACCESS 权限不足
       EOPNOTSUPP 指定的socket并未支援listen模式。
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -928,9 +970,9 @@
       int addr_len = sizeof(struct sockaddr_in);
       fd_set readfds;
       char buffer[256];
-      char msg[ ] =”Welcome to server!”;
+      char msg[ ] ="Welcome to server!";
       if ((sockfd = socket(AF_INET,SOCK_STREAM,0)) "0){
-      perror(“socket”);
+      perror("socket");
       exit(1);
       }
       bzero(&addr,sizeof(addr));
@@ -938,11 +980,11 @@
       addr.sin_port = htons(PORT);
       addr.sin_addr.s_addr = htonl(INADDR_ANY);
       if(bind(sockfd,&addr,sizeof(addr)) "0){
-      perror(“connect”);
+      perror("connect");
       exit(1);
       }
       if(listen(sockfd,3) "0){
-      perror(“listen”);
+      perror("listen");
       exit(1);
       }
       for(fd=0;fd "MAXSOCKFD;fd++)
@@ -957,18 +999,18 @@
       if(FD_ISSET(fd,&readfds)){
       if(sockfd = =fd){
       if((newsockfd = accept (sockfd,&addr,&addr_len)) "0)
-      perror(“accept”);
+      perror("accept");
       write(newsockfd,msg,sizeof(msg));
       is_connected[newsockfd] =1;
-      printf(“cnnect from %s\n”,inet_ntoa(addr.sin_addr));
+      printf("cnnect from %s\n",inet_ntoa(addr.sin_addr));
       }else{
       bzero(buffer,sizeof(buffer));
       if(read(fd,buffer,sizeof(buffer)) "=0){
-      printf(“connect closed.\n”);
+      printf("connect closed.\n");
       is_connected[fd]=0;
       close(fd);
       }else
-      printf(“%s”,buffer);
+      printf("%s",buffer);
       }
       }
       }
@@ -998,7 +1040,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       ntohl(将32位网络字符顺序转换成主机字符顺序) </font> </td>
     </tr>
     <tr>
@@ -1006,9 +1048,9 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#htonl">htonl</a>,
-        <a href="12.html#htons">htons</a>,
-        <a href="12.html#ntohs">ntohs</a>
+        <a href="14.html#htonl">htonl</a>,
+        <a href="14.html#htons">htons</a>,
+        <a href="14.html#ntohs">ntohs</a>
       </font> </td>
     </tr>
     <tr>
@@ -1022,8 +1064,8 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> unsigned long int ntohl(unsigned 
-      long int netlong);
+      <td valign="top"> <font class="font"> 
+        unsigned long int ntohl(unsigned long int netlong);
       </font> </td>
     </tr>
     <tr>
@@ -1060,7 +1102,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       ntohs(将16位网络字符顺序转换成主机字符顺序) </font> </td>
     </tr>
     <tr>
@@ -1068,9 +1110,9 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#htonl">htonl</a>,
-        <a href="12.html#htons">htons</a>,
-        <a href="12.html#ntohl">ntohl</a>   <!--this is a tag-->
+        <a href="14.html#htonl">htonl</a>,
+        <a href="14.html#htons">htons</a>,
+        <a href="14.html#ntohl">ntohl</a> 
       </font> </td>
     </tr>
     <tr>
@@ -1084,8 +1126,8 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> unsigned short int ntohs(unsigned 
-      short int netshort);
+      <td valign="top"> <font class="font"> 
+        unsigned short int ntohs(unsigned short int netshort);
       </font> </td>
     </tr>
     <tr>
@@ -1122,7 +1164,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       recv(经socket接收数据) </font> </td>
     </tr>
     <tr>
@@ -1130,19 +1172,18 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>
-        recvfrom，recvmsg，send，sendto，socket
+        <a href="14.html#recvfrom">recvfrom</a>,
+        <a href="14.html#recvmsg">recvmsg</a>,
+        <a href="14.html#send">send</a>,
+        <a href="14.html#sendto">sendto</a>,
+        <a href="14.html#socket">socket</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include "sys/types.h"
+      <td valign="top"> <font class="font"> #include "sys/types.h" <br/>
       #include "sys/socket.h"
       </font> </td>
     </tr>
@@ -1150,16 +1191,15 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int recv(int s,void *buf,int len,unsigned 
-      int flags);
+      <td valign="top"> <font class="font"> 
+        int recv(int s, void *buf, int len, unsigned int flags);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> recv()用来接收远端主机经指定的socket传来的数据，并把数据存到由参数buf 
-      指向的内存空间，参数len为可接收数据的最大长度。
+      <td valign="top"> <font class="font"> recv()用来接收远端主机经指定的socket传来的数据，并把数据存到由参数buf指向的内存空间，参数len为可接收数据的最大长度。
       </font> </td>
     </tr>
     <tr>
@@ -1167,17 +1207,22 @@
         <div class="div"><font class="font"> 参数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> flags一般设0。其他数值定义如下:
+        <pre>
       MSG_OOB 接收以out-of-band 送出的数据。
       MSG_PEEK 返回来的数据并不会在系统内删除，如果再调用recv()会返回相同的数据内容。
       MSG_WAITALL强迫接收到len大小的数据后才能返回，除非有错误或信号产生。
-      MSG_NOSIGNAL此操作不愿被SIGPIPE信号中断返回值成功则返回接收到的字符数，失败返回-1，错误原因存于errno中。
+      MSG_NOSIGNAL此操作不愿被SIGPIPE信号中断返回值成功则返回接收到的字符数，
+                  失败返回-1，错误原因存于errno中。
+      </pre>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 错误代码 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> EBADF 参数s非合法的socket处理代码
+      <td valign="top"> <font class="font"> 
+        <pre>
+      EBADF 参数s非合法的socket处理代码
       EFAULT 参数中有一指针指向无法存取的内存空间
       ENOTSOCK 参数s为一文件描述词，非socket。
       EINTR 被信号所中断
@@ -1185,6 +1230,7 @@
       ENOBUFS 系统的缓冲内存不足。
       ENOMEM 核心内存不足
       EINVAL 传给系统调用的参数不正确。
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -1207,7 +1253,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       recvfrom(经socket接收数据) </font> </td>
     </tr>
     <tr>
@@ -1215,19 +1261,18 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>
-        recv，recvmsg，send，sendto，socket
+        <a href="14.html#recv">recv</a>,
+        <a href="14.html#recvmsg">recvmsg</a>,
+        <a href="14.html#send">send</a>,
+        <a href="14.html#sendto">sendto</a>,
+        <a href="14.html#socket">socket</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include "sys/types.h"
+      <td valign="top"> <font class="font"> #include "sys/types.h" <br/>
       #include "sys/socket.h"
       </font> </td>
     </tr>
@@ -1235,17 +1280,15 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int recvfrom(int s,void *buf,int 
-      len,unsigned int flags ,struct sockaddr *from ,int *fromlen);
+      <td valign="top"> <font class="font"> 
+        int recvfrom(int s, void *buf, int len, unsigned int flags, struct sockaddr *from, int *fromlen);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> recv()用来接收远程主机经指定的socket 传来的数据，并把数据存到由参数buf 
-      指向的内存空间，参数len 为可接收数据的最大长度。参数flags 一般设0，其他数值定义请参考recv()。参数from用来指定欲传送的网络地址，结构sockaddr 
-      请参考bind()。参数fromlen为sockaddr的结构长度。
+      <td valign="top"> <font class="font"> recv()用来接收远程主机经指定的socket 传来的数据，并把数据存到由参数buf指向的内存空间，参数len为可接收数据的最大长度。参数flags一般设0，其他数值定义请参考recv()。参数from用来指定欲传送的网络地址，结构sockaddr请参考bind()。参数fromlen为sockaddr的结构长度。
       </font> </td>
     </tr>
     <tr>
@@ -1259,7 +1302,9 @@
       <td class="td">
         <div class="div"><font class="font"> 错误代码 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> EBADF 参数s非合法的socket处理代码
+      <td valign="top"> <font class="font"> 
+        <pre>
+      EBADF 参数s非合法的socket处理代码
       EFAULT 参数中有一指针指向无法存取的内存空间。
       ENOTSOCK 参数s为一文件描述词，非socket。
       EINTR 被信号所中断。
@@ -1267,6 +1312,7 @@
       ENOBUFS 系统的缓冲内存不足
       ENOMEM 核心内存不足
       EINVAL 传给系统调用的参数不正确。
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -1285,7 +1331,7 @@
       #include "netinet/in.h"
       #include "arpa/inet.h"
       #define PORT 2345
-      #define SERVER_IP “127.0.0.1”
+      #define SERVER_IP "127.0.0.1"
       main()
       {
       int s,len;
@@ -1294,7 +1340,7 @@
       char buffer[256];
       /* 建立socket*/
       if((s = socket(AF_INET,SOCK_DGRAM,0)) "0){
-      perror(“socket”);
+      perror("socket");
       exit(1);
       }
       /* 填写sockaddr_in*/
@@ -1310,7 +1356,7 @@
       sendto(s,buffer,len,0,&addr,addr_len);
       /* 接收server端返回的字符串*/
       len = recvfrom(s,buffer,sizeof(buffer),0,&addr,&addr_len);
-      printf(“receive: %s”,buffer);
+      printf("receive: %s",buffer);
       }
       }
       </font> </td>
@@ -1337,7 +1383,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       recvmsg(经socket接收数据) </font> </td>
     </tr>
     <tr>
@@ -1345,20 +1391,19 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>
-        recv，recvfrom，send，sendto，sendmsg，socket
+        <a href="14.html#recv">recv</a>,
+        <a href="14.html#recvfrom">recvfrom</a>,
+        <a href="14.html#send">send</a>,
+        <a href="14.html#sendto">sendto</a>,
+        <a href="14.html#sendmsg">sendmsg</a>,
+        <a href="14.html#socket">socket</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include "sys/types.h"
+      <td valign="top"> <font class="font"> #include "sys/types.h" <br/>
       #include "sys/socktet.h"
       </font> </td>
     </tr>
@@ -1366,8 +1411,8 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int recvmsg(int s,struct msghdr 
-      *msg,unsigned int flags);
+      <td valign="top"> <font class="font"> 
+        int recvmsg(int s, struct msghdr *msg, unsigned int flags);
       </font> </td>
     </tr>
     <tr>
@@ -1388,7 +1433,9 @@
       <td class="td">
         <div class="div"><font class="font"> 错误代码 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> EBADF 参数s非合法的socket处理代码。
+      <td valign="top"> <font class="font"> 
+        <pre>
+      EBADF 参数s非合法的socket处理代码。
       EFAULT 参数中有一指针指向无法存取的内存空间
       ENOTSOCK 参数s为一文件描述词，非socket。
       EINTR 被信号所中断。
@@ -1396,6 +1443,7 @@
       ENOBUFS 系统的缓冲内存不足
       ENOMEM 核心内存不足
       EINVAL 传给系统调用的参数不正确。
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -1418,7 +1466,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       send(经socket传送数据) </font> </td>
     </tr>
     <tr>
@@ -1426,19 +1474,18 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>
-        sendto，sendmsg，recv，recvfrom，socket
+        <a href="14.html#sendto">sendto</a>,
+        <a href="14.html#sendmsg">sendmsg</a>,
+        <a href="14.html#recv">recv</a>,
+        <a href="14.html#recvfrom">recvfrom</a>,
+        <a href="14.html#socket">socket</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include "sys/types.h"
+      <td valign="top"> <font class="font"> #include "sys/types.h" <br/>
       #include "sys/socket.h"
       </font> </td>
     </tr>
@@ -1446,19 +1493,21 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int send(int s,const void * msg,int 
-      len,unsigned int falgs);
+      <td valign="top"> <font class="font"> 
+        int send(int s, const void *msg, int len, unsigned int falgs);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> send()用来将数据由指定的socket 传给对方主机。参数s为已建立好连接的socket。参数msg指向欲连线的数据内容，参数len则为数据长度。参数flags一般设0，其他数值定义如下
+      <td valign="top"> <font class="font"> send()用来将数据由指定的socket 传给对方主机。参数s为已建立好连接的socket。参数msg指向欲连线的数据内容，参数len则为数据长度。参数flags一般设0，其他数值定义如下:
+        <pre>
       MSG_OOB 传送的数据以out-of-band 送出。
       MSG_DONTROUTE 取消路由表查询
       MSG_DONTWAIT 设置为不可阻断运作
       MSG_NOSIGNAL 此动作不愿被SIGPIPE 信号中断。
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -1472,7 +1521,9 @@
       <td class="td">
         <div class="div"><font class="font"> 错误代码 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> EBADF 参数s 非合法的socket处理代码。
+      <td valign="top"> <font class="font"> 
+        <pre>
+      EBADF 参数s非合法的socket处理代码。
       EFAULT 参数中有一指针指向无法存取的内存空间
       ENOTSOCK 参数s为一文件描述词，非socket。
       EINTR 被信号所中断。
@@ -1480,6 +1531,7 @@
       ENOBUFS 系统的缓冲内存不足
       ENOMEM 核心内存不足
       EINVAL 传给系统调用的参数不正确。
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -1502,7 +1554,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       sendmsg(经socket传送数据) </font> </td>
     </tr>
     <tr>
@@ -1510,20 +1562,19 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>
-        send，sendto，recv，recvfrom，recvmsg，socket
+        <a href="14.html#send">send</a>,
+        <a href="14.html#sendto">sendto</a>,
+        <a href="14.html#recv">recv</a>,
+        <a href="14.html#recvfrom">recvfrom</a>,
+        <a href="14.html#recvmsg">recvmsg</a>,
+        <a href="14.html#socket">socket</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include "sys/types.h"
+      <td valign="top"> <font class="font"> #include "sys/types.h" <br/>
       #include "sys/socket.h"
       </font> </td>
     </tr>
@@ -1531,27 +1582,28 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int sendmsg(int s,const strcut 
-      msghdr *msg,unsigned int flags);
+      <td valign="top"> <font class="font"> 
+        int sendmsg(int s, const strcut msghdr *msg, unsigned int flags);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> sendmsg()用来将数据由指定的socket传给对方主机。参数s为已建立好连线的socket，如果利用UDP协议则不需经过连线操作。参数msg 
-      指向欲连线的数据结构内容，参数flags一般默认为0，详细描述请参考send()。
-      结构msghdr定义如下
-      struct msghdr
-      {
-      void *msg_name; /*Address to send to /receive from . */
-      socklen_t msg_namelen; /* Length of addres data */
-      strcut iovec * msg_iov; /* Vector of data to send/receive into */
-      size_t msg_iovlen; /* Number of elements in the vector */
-      void * msg_control; /* Ancillary dat */
-      size_t msg_controllen; /* Ancillary data buffer length */
-      int msg_flags; /* Flags on received message */
-      };
+      <td valign="top"> <font class="font"> sendmsg()用来将数据由指定的socket传给对方主机。参数s为已建立好连线的socket，如果利用UDP协议则不需经过连线操作。参数msg指向欲连线的数据结构内容，参数flags一般默认为0，详细描述请参考send()。结构msghdr定义如下:
+        <pre>
+          struct msghdr
+          {
+              void *msg_name; /*Address to send to /receive from . */
+              socklen_t msg_namelen; /* Length of addres data */
+              strcut iovec * msg_iov; /* Vector of data to send/receive into */
+              size_t msg_iovlen; /* Number of elements in the vector */
+              void * msg_control; /* Ancillary dat */
+              size_t msg_controllen; /* Ancillary data buffer length */
+              int msg_flags; /* Flags on received message */
+          };
+        </pre>
+      
       </font> </td>
     </tr>
     <tr>
@@ -1565,7 +1617,9 @@
       <td class="td">
         <div class="div"><font class="font"> 错误代码 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> EBADF 参数s 非合法的socket处理代码。
+      <td valign="top"> <font class="font"> 
+        <pre>
+      EBADF 参数s 非合法的socket处理代码。
       EFAULT 参数中有一指针指向无法存取的内存空间
       ENOTSOCK 参数s为一文件描述词，非socket。
       EINTR 被信号所中断。
@@ -1573,6 +1627,7 @@
       ENOBUFS 系统的缓冲内存不足
       ENOMEM 核心内存不足
       EINVAL 传给系统调用的参数不正确。
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -1595,7 +1650,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       sendto(经socket传送数据) </font> </td>
     </tr>
     <tr>
@@ -1603,38 +1658,34 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>
-        send , sendmsg,recv , recvfrom 
-      , socket
+        <a href="14.html#send">send</a>,
+        <a href="14.html#sendmsg">sendmsg</a>,
+        <a href="14.html#recv">recv</a>,
+        <a href="14.html#recvfrom">recvfrom</a>,
+        <a href="14.html#socket">socket</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include  " sys/types.h "
-      #include  " sys/socket.h "
+      <td valign="top"> <font class="font"> #include "sys/types.h" <br/>
+      #include "sys/socket.h"
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int sendto ( int s , const void 
-      * msg, int len, unsigned int flags, const 
-      struct sockaddr * to , int tolen ) ;
+      <td valign="top"> <font class="font"> 
+        int sendto(int s, const void *msg, int len, unsigned int flags, const struct sockaddr *to, int tolen) ;
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> sendto() 用来将数据由指定的socket传给对方主机。参数s为已建好连线的socket,如果利用UDP协议则不需经过连线操作。参数msg指向欲连线的数据内容，参数flags 
-      一般设0，详细描述请参考send()。参数to用来指定欲传送的网络地址，结构sockaddr请参考bind()。参数tolen为sockaddr的结果长度。
+      <td valign="top"> <font class="font"> sendto() 用来将数据由指定的socket传给对方主机。参数s为已建好连线的socket,如果利用UDP协议则不需经过连线操作。参数msg指向欲连线的数据内容，参数flags一般设0，详细描述请参考send()。参数to用来指定欲传送的网络地址，结构sockaddr请参考bind()。参数tolen为sockaddr的结果长度。
       </font> </td>
     </tr>
     <tr>
@@ -1649,13 +1700,16 @@
       <td class="td">
         <div class="div"><font class="font"> 错误代码 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> EBADF 参数s非法的socket处理代码。
+      <td valign="top"> <font class="font"> 
+        <pre>
+      EBADF 参数s非法的socket处理代码。
       EFAULT 参数中有一指针指向无法存取的内存空间。
       WNOTSOCK canshu s为一文件描述词，非socket。
       EINTR 被信号所中断。
       EAGAIN 此动作会令进程阻断，但参数s的soket为补课阻断的。
       ENOBUFS 系统的缓冲内存不足。
       EINVAL 传给系统调用的参数不正确。
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -1673,7 +1727,7 @@
       char buffer[256];
       /*建立socket*/
       if(sockfd=socket (AF_INET,SOCK_DGRAM,0)) "0){
-      perror (“socket”);
+      perror ("socket");
       exit(1);
       }
       /*填写sockaddr_in 结构*/
@@ -1682,16 +1736,16 @@
       addr.sin_port=htons(PORT);
       addr.sin_addr=hton1(INADDR_ANY) ;
       if (bind(sockfd, &addr, sizeof(addr)) "0){
-      perror(“connect”);
+      perror("connect");
       exit(1);
       }
       while(1){
       bezro(buffer,sizeof(buffer));
       len = recvfrom(socket,buffer,sizeof(buffer), 0 , &addr &addr_len);
       /*显示client端的网络地址*/
-      printf(“receive from %s\n “ , inet_ntoa( addr.sin_addr));
+      printf("receive from %s\n " , inet_ntoa( addr.sin_addr));
       /*将字串返回给client端*/
-      sendto(sockfd,buffer,len,0,&addr,addr_len);”
+      sendto(sockfd,buffer,len,0,&addr,addr_len);"
       }
       }
       </font> </td>
@@ -1716,7 +1770,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       setprotoent(打开网络协议的数据文件) </font> </td>
     </tr>
     <tr>
@@ -1724,33 +1778,30 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>
-        getprotobyname, getprotobynumber, 
-      endprotoent
+        <a href="14.html#getprotobyname">getprotobyname</a>,
+        <a href="14.html#getprotobynumber">getprotobynumber</a>,
+        <a href="14.html#endprotoent">endprotoent</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include  "netdb.h"
+      <td valign="top"> <font class="font"> #include "netdb.h"
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> void setprotoent (int stayopen);
+      <td valign="top"> <font class="font"> void setprotoent(int stayopen);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> setprotoent()用来打开/etc/protocols， 
-      如果参数stayopen值为1，则接下来的getprotobyname()或getprotobynumber()将不会自动关闭此文件。
+      <td valign="top"> <font class="font"> setprotoent()用来打开/etc/protocols，如果参数stayopen值为1，则接下来的getprotobyname()或getprotobynumber()将不会自动关闭此文件。
       </font> </td>
     </tr>
     <tr><td><br/><br/></td></tr>
@@ -1766,7 +1817,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       setservent(打开主机网络服务的数据文件) </font> </td>
     </tr>
     <tr>
@@ -1774,26 +1825,24 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>
-        getservent, getservbyname, getservbyport, 
-      endservent
+        <a href="14.html#getservent">getservent</a>,
+        <a href="14.html#getservbyname">getservbyname</a>,
+        <a href="14.html#getservbyport">getservbyport</a>,
+        <a href="14.html#endservent">endservent</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include  " netdb.h "
+      <td valign="top"> <font class="font"> #include "netdb.h" <br/>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> void setservent (int stayopen);
+      <td valign="top"> <font class="font"> void setservent(int stayopen);
       </font> </td>
     </tr>
     <tr>
@@ -1816,7 +1865,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       setsockopt(设置socket状态) </font> </td>
     </tr>
     <tr>
@@ -1824,15 +1873,14 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#"></a>
-        getsockopt
+        <a href="14.html#getsockopt">getsockopt</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include "sys/types.h"
+      <td valign="top"> <font class="font"> #include "sys/types.h" <br/>
       #include "sys/socket.h"
       </font> </td>
     </tr>
@@ -1840,8 +1888,8 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int setsockopt(int s,int level,int 
-      optname,const void * optval,,socklen_toptlen);
+      <td valign="top"> <font class="font"> 
+        int setsockopt(int s, int level, int optname, const void *optval, socklen_toptlen);
       </font> </td>
     </tr>
     <tr>
@@ -1849,6 +1897,7 @@
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
       <td valign="top"> <font class="font"> setsockopt()用来设置参数s所指定的socket状态。参数level代表欲设置的网络层，一般设成SOL_SOCKET以存取socket层。参数optname代表欲设置的选项，有下列几种数值:
+        <pre>
       SO_DEBUG 打开或关闭排错模式
       SO_REUSEADDR 允许在bind()过程中本地地址可重复使用
       SO_TYPE 返回socket形态。
@@ -1860,6 +1909,7 @@
       SO_KEEPALIVE 定期确定连线是否已终止。
       SO_OOBINLINE 当接收到OOB 数据时会马上送至标准输入设备
       SO_LINGER 确保数据安全且可靠的传送出去。
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -1880,10 +1930,13 @@
       <td class="td">
         <div class="div"><font class="font"> 附加说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> EBADF 参数s并非合法的socket处理代码
+      <td valign="top"> <font class="font"> 
+        <pre>
+      EBADF 参数s并非合法的socket处理代码
       ENOTSOCK 参数s为一文件描述词，非socket
       ENOPROTOOPT 参数optname指定的选项不正确。
       EFAULT 参数optval指针指向无法存取的内存空间。
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -1906,7 +1959,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       shutdown(终止socket通信) </font> </td>
     </tr>
     <tr>
@@ -1914,9 +1967,8 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>
-        socket，connect
+        <a href="14.html#socket">socket</a>,
+        <a href="14.html#connect">connect</a>
       </font> </td>
     </tr>
     <tr>
@@ -1930,7 +1982,7 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int shutdown(int s,int how);
+      <td valign="top"> <font class="font"> int shutdown(int s, int how);
       </font> </td>
     </tr>
     <tr>
@@ -1938,9 +1990,11 @@
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
       <td valign="top"> <font class="font"> shutdown()用来终止参数s所指定的socket连线。参数s是连线中的socket处理代码，参数how有下列几种情况:
+        <pre>
       how=0 终止读取操作。
       how=1 终止传送操作
       how=2 终止读取及传送操作
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -1954,9 +2008,12 @@
       <td class="td">
         <div class="div"><font class="font"> 错误代码 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> EBADF 参数s不是有效的socket处理代码
+      <td valign="top"> <font class="font"> 
+        <pre>
+      EBADF 参数s不是有效的socket处理代码
       ENOTSOCK 参数s为一文件描述词，非socket
       ENOTCONN 参数s指定的socket并未连线
+      </pre>
       </font> </td>
     </tr>
     <tr><td><br/><br/></td></tr>
@@ -1972,7 +2029,7 @@
         <div class="div"><font class="font"> 
         </font> </div>
       </td>
-      <td valign="top"> <font class="font"> 
+      <td valign="top"> <font class="font tt"> 
       socket(建立一个socket通信) </font> </td>
     </tr>
     <tr>
@@ -1980,18 +2037,17 @@
         <div class="div"><font class="font"> 相关函数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> 
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>,
-        <a href="12.html#"></a>
-        accept，bind，connect，listen
+        <a href="14.html#accept">accept</a>,
+        <a href="14.html#bind">bind</a>,
+        <a href="14.html#connect">connect</a>,
+        <a href="14.html#listen">listen</a>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 表头文件 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include "sys/types.h"
+      <td valign="top"> <font class="font"> #include "sys/types.h" <br/>
       #include "sys/socket.h"
       </font> </td>
     </tr>
@@ -1999,16 +2055,15 @@
       <td class="td">
         <div class="div"><font class="font"> 定义函数 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> int socket(int domain,int type,int 
-      protocol);
+      <td valign="top"> <font class="font"> int socket(int domain, int type, int protocol);
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 函数说明 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> socket()用来建立一个新的socket，也就是向系统注册，通知系统建立一通信端口。参数domain 
-      指定使用何种的地址类型，完整的定义在/usr/include/bits/socket.h 内，底下是常见的协议:
+      <td valign="top"> <font class="font"> socket()用来建立一个新的socket，也就是向系统注册，通知系统建立一通信端口。参数domain指定使用何种的地址类型，完整的定义在/usr/include/bits/socket.h 内，底下是常见的协议:
+        <pre>
       PF_UNIX/PF_LOCAL/AF_UNIX/AF_LOCAL UNIX 进程通信协议
       PF_INET?AF_INET Ipv4网络协议
       PF_INET6/AF_INET6 Ipv6 网络协议
@@ -2019,6 +2074,7 @@
       PF_ATMPVC/AF_ATMPVC 存取原始ATM PVCs
       PF_APPLETALK/AF_APPLETALK appletalk(DDP)协议
       PF_PACKET/AF_PACKET 初级封包接口
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -2026,6 +2082,7 @@
         <div class="div"><font class="font"> 参数 </font> </div>
       </td>
       <td valign="top"> <font class="font"> type有下列几种数值:
+        <pre>
       SOCK_STREAM 提供双向连续且可信赖的数据流，即TCP。支持
       OOB 机制，在所有数据传送前必须使用connect()来建立连线状态。
       SOCK_DGRAM 使用不连续不可信赖的数据包连接
@@ -2034,6 +2091,7 @@
       SOCK_RDM 提供可信赖的数据包连接
       SOCK_PACKET 提供和网络驱动程序直接通信。
       protocol用来指定socket所使用的传输协议编号，通常此参考不用管它，设为0即可。
+      </pre>
       </font> </td>
     </tr>
     <tr>
@@ -2047,12 +2105,15 @@
       <td class="td">
         <div class="div"><font class="font"> 错误代码 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> EPROTONOSUPPORT 参数domain指定的类型不支持参数type或protocol指定的协议
+      <td valign="top"> <font class="font"> 
+        <pre>
+      EPROTONOSUPPORT 参数domain指定的类型不支持参数type或protocol指定的协议
       ENFILE 核心内存不足，无法建立新的socket结构
       EMFILE 进程文件表溢出，无法再建立新的socket
       EACCESS 权限不足，无法建立type或protocol指定的协议
       ENOBUFS/ENOMEM 内存不足
       EINVAL 参数domain/type/protocol不合法
+      </pre>
       </font> </td>
     </tr>
     <tr>
