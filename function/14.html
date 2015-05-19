@@ -956,75 +956,94 @@
       <td class="td">
         <div class="div"><font class="font"> 范例 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include "sys/types.h"
-      #include "sys/socket.h"
-      #include "netinet/in.h"
-      #include "arpa/inet.h"
-      #include "unistd.h"
-      #define PORT 1234
-      #define MAXSOCKFD 10
-      main()
-      {
-      int sockfd,newsockfd,is_connected[MAXSOCKFD],fd;
-      struct sockaddr_in addr;
-      int addr_len = sizeof(struct sockaddr_in);
-      fd_set readfds;
-      char buffer[256];
-      char msg[ ] ="Welcome to server!";
-      if ((sockfd = socket(AF_INET,SOCK_STREAM,0)) "0){
-      perror("socket");
-      exit(1);
-      }
-      bzero(&addr,sizeof(addr));
-      addr.sin_family =AF_INET;
-      addr.sin_port = htons(PORT);
-      addr.sin_addr.s_addr = htonl(INADDR_ANY);
-      if(bind(sockfd,&addr,sizeof(addr)) "0){
-      perror("connect");
-      exit(1);
-      }
-      if(listen(sockfd,3) "0){
-      perror("listen");
-      exit(1);
-      }
-      for(fd=0;fd "MAXSOCKFD;fd++)
-      is_connected[fd]=0;
-      while(1){
-      FD_ZERO(&readfds);
-      FD_SET(sockfd,&readfds);
-      for(fd=0;fd "MAXSOCKFD;fd++)
-      if(is_connected[fd]) FD_SET(fd,&readfds);
-      if(!select(MAXSOCKFD,&readfds,NULL,NULL,NULL))continue;
-      for(fd=0;fd "MAXSOCKFD;fd++)
-      if(FD_ISSET(fd,&readfds)){
-      if(sockfd = =fd){
-      if((newsockfd = accept (sockfd,&addr,&addr_len)) "0)
-      perror("accept");
-      write(newsockfd,msg,sizeof(msg));
-      is_connected[newsockfd] =1;
-      printf("cnnect from %s\n",inet_ntoa(addr.sin_addr));
-      }else{
-      bzero(buffer,sizeof(buffer));
-      if(read(fd,buffer,sizeof(buffer)) "=0){
-      printf("connect closed.\n");
-      is_connected[fd]=0;
-      close(fd);
-      }else
-      printf("%s",buffer);
-      }
-      }
-      }
-      }
+      <td valign="top"> <font class="font"> 
+        <pre class="brush: cpp;">
+          #include "sys/types.h"
+          #include "sys/socket.h"
+          #include "netinet/in.h"
+          #include "arpa/inet.h"
+          #include "unistd.h"
+          #include "stdlib.h"
+          #include "string.h"
+          #include "stdio.h"
+          #define PORT 1234
+          #define MAXSOCKFD 10
+
+          int main(int argc, char const *argv[])
+          {
+              int sockfd, newsockfd, is_connected[MAXSOCKFD], fd;
+              struct sockaddr_in addr;
+              int addr_len = sizeof(struct sockaddr_in);
+              fd_set readfds;
+              char buffer[256];
+              char msg[ ] = "Welcome to server!";
+              if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+              {
+                  perror("socket");
+                  exit(1);
+              }
+              bzero(&addr, sizeof(addr));
+              addr.sin_family = AF_INET;
+              addr.sin_port = htons(PORT);
+              addr.sin_addr.s_addr = htonl(INADDR_ANY);
+              if (bind(sockfd, &addr, sizeof(addr)) < 0)
+              {
+                  perror("connect");
+                  exit(1);
+              }
+              if (listen(sockfd, 3) < 0)
+              {
+                  perror("listen");
+                  exit(1);
+              }
+              for (fd = 0; fd < MAXSOCKFD; fd++)
+                  is_connected[fd] = 0;
+              while (1)
+              {
+                  FD_ZERO(&readfds);
+                  FD_SET(sockfd, &readfds);
+                  for (fd = 0; fd < MAXSOCKFD; fd++)
+                      if (is_connected[fd])
+                          FD_SET(fd, &readfds);
+                  if (!select(MAXSOCKFD, &readfds, NULL, NULL, NULL))
+                      continue;
+                  for (fd = 0; fd < MAXSOCKFD; fd++)
+                      if (FD_ISSET(fd, &readfds))
+                      {
+                          if (sockfd == fd)
+                          {
+                              if ((newsockfd = accept (sockfd, &addr, &addr_len)) < 0)
+                                  perror("accept");
+                              write(newsockfd, msg, sizeof(msg));
+                              is_connected[newsockfd] = 1;
+                              printf("cnnect from %s\n", inet_ntoa(addr.sin_addr));
+                          }
+                          else
+                          {
+                              bzero(buffer, sizeof(buffer));
+                              if (read(fd, buffer, sizeof(buffer)) <= 0)
+                              {
+                                  printf("connect closed.\n");
+                                  is_connected[fd] = 0;
+                                  close(fd);
+                              } else
+                                  printf("%s", buffer);
+                          }
+                      }
+              }
+              return 0;
+          }
+        </pre>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 执行 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> $ ./listen
-      connect from 127.0.0.1
-      hi I am client
-      connected closed.
+      <td valign="top"> <font class="font"> 
+        <pre class="brush: cpp;">
+          /*配合client自行测试*/
+        </pre>
       </font> </td>
     </tr>
     <tr><td><br/><br/></td></tr>
@@ -1319,55 +1338,62 @@
       <td class="td">
         <div class="div"><font class="font"> 范例 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> /*利用socket的UDP client
-      此程序会连线UDP server，并将键盘输入的字符串传给server。
-      UDP server 范例请参考sendto()。
-      */
-      #include "sys/stat.h"
-      #include "fcntl.h"
-      #include "unistd.h"
-      #include "sys/typs.h"
-      #include "sys/socket.h"
-      #include "netinet/in.h"
-      #include "arpa/inet.h"
-      #define PORT 2345
-      #define SERVER_IP "127.0.0.1"
-      main()
-      {
-      int s,len;
-      struct sockaddr_in addr;
-      int addr_len =sizeof(struct sockaddr_in);
-      char buffer[256];
-      /* 建立socket*/
-      if((s = socket(AF_INET,SOCK_DGRAM,0)) "0){
-      perror("socket");
-      exit(1);
-      }
-      /* 填写sockaddr_in*/
-      bzero(&addr,sizeof(addr));
-      addr.sin_family = AF_INET;
-      addr.sin_port = htons(PORT);
-      addr.sin_addr.s_addr = inet_addr(SERVER_IP);
-      while(1){
-      bzero(buffer,sizeof(buffer));
-      /* 从标准输入设备取得字符串*/
-      len =read(STDIN_FILENO,buffer,sizeof(buffer));
-      /* 将字符串传送给server端*/
-      sendto(s,buffer,len,0,&addr,addr_len);
-      /* 接收server端返回的字符串*/
-      len = recvfrom(s,buffer,sizeof(buffer),0,&addr,&addr_len);
-      printf("receive: %s",buffer);
-      }
-      }
+      <td valign="top"> <font class="font"> 
+      <pre class="brush: cpp;">
+        /*利用socket的UDP client此程序会连线UDP server，并将键盘输入的字符串传给server。
+          UDP server 范例请参考sendto()。*/
+          #include "sys/stat.h"
+          #include "fcntl.h"
+          #include "unistd.h"
+          #include "sys/types.h"
+          #include "sys/socket.h"
+          #include "netinet/in.h"
+          #include "arpa/inet.h"
+          #include "stdio.h"
+          #include "stdlib.h"
+          #include "string.h"
+          #define PORT 2345
+          #define SERVER_IP "127.0.0.1"
+
+          int main(int argc, char const *argv[])
+          {
+              int s, len;
+              struct sockaddr_in addr;
+              int addr_len = sizeof(struct sockaddr_in);
+              char buffer[256];
+              /* 建立socket*/
+              if ((s = socket(AF_INET, SOCK_DGRAM, 0)) < 0) {
+                  perror("socket");
+                  exit(1);
+              }
+              /* 填写sockaddr_in*/
+              bzero(&addr, sizeof(addr));
+              addr.sin_family = AF_INET;
+              addr.sin_port = htons(PORT);
+              addr.sin_addr.s_addr = inet_addr(SERVER_IP);
+              while (1) {
+                  bzero(buffer, sizeof(buffer));
+                  /* 从标准输入设备取得字符串*/
+                  len = read(STDIN_FILENO, buffer, sizeof(buffer));
+                  /* 将字符串传送给server端*/
+                  sendto(s, buffer, len, 0, &addr, addr_len);
+                  /* 接收server端返回的字符串*/
+                  len = recvfrom(s, buffer, sizeof(buffer), 0, &addr, &addr_len);
+                  printf("receive: %s", buffer);
+              }
+              return 0;
+          }
+        </pre>
       </font> </td>
     </tr>
     <tr>
       <td class="td">
         <div class="div"><font class="font"> 执行 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> (先执行udp server 再执行udp client)
-      hello /*从键盘输入字符串*/
-      receive: hello /*server端返回来的字符串*/
+      <td valign="top"> <font class="font"> 
+        <pre class="brush: cpp;">
+          /*配合client自行测试 */
+        </pre>
       </font> </td>
     </tr>
     <tr><td><br/><br/></td></tr>
@@ -1716,38 +1742,49 @@
       <td class="td">
         <div class="div"><font class="font"> 范例 </font> </div>
       </td>
-      <td valign="top"> <font class="font"> #include  " sys/types.h "
-      #include  " sys/socket.h "
-      # include  "netinet.in.h"
-      #include  "arpa.inet.h"
-      #define PORT 2345 /*使用的port*/
-      main(){
-      int sockfd,len;
-      struct sockaddr_in addr;
-      char buffer[256];
-      /*建立socket*/
-      if(sockfd=socket (AF_INET,SOCK_DGRAM,0)) "0){
-      perror ("socket");
-      exit(1);
-      }
-      /*填写sockaddr_in 结构*/
-      bzero ( &addr, sizeof(addr) );
-      addr.sin_family=AF_INET;
-      addr.sin_port=htons(PORT);
-      addr.sin_addr=hton1(INADDR_ANY) ;
-      if (bind(sockfd, &addr, sizeof(addr)) "0){
-      perror("connect");
-      exit(1);
-      }
-      while(1){
-      bezro(buffer,sizeof(buffer));
-      len = recvfrom(socket,buffer,sizeof(buffer), 0 , &addr &addr_len);
-      /*显示client端的网络地址*/
-      printf("receive from %s\n " , inet_ntoa( addr.sin_addr));
-      /*将字串返回给client端*/
-      sendto(sockfd,buffer,len,0,&addr,addr_len);"
-      }
-      }
+      <td valign="top"> <font class="font"> 
+        <pre class="brush: cpp; ">
+          #include "sys/types.h"
+          #include "sys/socket.h"
+          #include "netinet/in.h"
+          #include "arpa/inet.h"
+          #include "stdio.h"
+          #include "stdlib.h"
+          #include "string.h"
+          #define PORT 2345 /*使用的port*/
+
+          int main(int argc, char const *argv[])
+          {
+              int sockfd, len;
+              struct sockaddr_in addr;
+              char buffer[256];
+              int addr_len = sizeof(struct sockaddr_in);
+              /*建立socket*/
+              if ((sockfd = socket (AF_INET, SOCK_DGRAM, 0)) < 0) 
+              {
+                  perror ("socket");
+                  exit(1);
+              }
+              /*填写sockaddr_in 结构*/
+              bzero ( &addr, sizeof(addr) );
+              addr.sin_family = AF_INET;
+              addr.sin_port = htons(PORT);
+              addr.sin_addr.s_addr = htonl(INADDR_ANY) ;
+              if (bind(sockfd, &addr, sizeof(addr)) < 0) {
+                  perror("connect");
+                  exit(1);
+              }
+              while (1) {
+              bzero(buffer, sizeof(buffer));
+                  len = recvfrom(socket, buffer, sizeof(buffer), 0 , &addr, &addr_len);
+                  /*显示client端的网络地址*/
+                  printf("receive from %s\n " , inet_ntoa( addr.sin_addr));
+                  /*将字串返回给client端*/
+                  sendto(sockfd, buffer, len, 0, &addr, addr_len);
+              }
+              return 0;
+          }
+        </pre>
       </font> </td>
     </tr>
     <tr>
